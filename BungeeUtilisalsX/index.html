@@ -8,6 +8,19 @@
     <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
           name="viewport">
     <link href="//unpkg.com/docsify/lib/themes/vue.css" rel="stylesheet">
+	<style>
+	    .app-name-link img {
+		    width: 100px;
+			display: block;
+			margin: auto;
+		}
+		
+		.app-name-link::after {
+		    content: 'BungeeUtilisalsX';
+			display: block;
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
 <div id="app"></div>
@@ -18,7 +31,8 @@
       loadSidebar: true,
       subMaxLevel: 1,
       noEmoji: true,
-      themeColor: '#ff5400'
+      themeColor: '#ff5400',
+	  logo: 'https://i.imgur.com/ErquAiN.png'
     }
 
 </script>
