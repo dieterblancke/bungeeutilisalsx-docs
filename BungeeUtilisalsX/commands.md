@@ -164,7 +164,7 @@ Only domains that contain the text you entered will be listed.
 **Aliases:** /domains find, /domains select <br>
 **Default Permission:** bungeeutilisals.commands.domains.search <br>
 
-## /bhelpop (message) _or_ /bhelpop reply (user) (message)
+## /bhelpop (message) or /bhelpop reply (user) (message)
 Helpop will message the online staff that have a permission to receive the message. <br>
 Helpop reply will allow you to reply to this user (only if you have the reply permission).
 
