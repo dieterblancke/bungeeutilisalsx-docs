@@ -7,10 +7,17 @@
 | --- | --- |
 | {timeleft: targetTime} | Shows the time left untill a certain time. targetTime must be of format dd-MM-yyyy hh:mm:ss, for example 01-01-2020 00:00:00, which would be first of january 2020, midnight. |
 | {getcount: server} | Shows the amount of players online on a server. server can be both a ServerGroup or a ServerName. |
-| {user} | Gets replaced by the user's name |
-| {ping} | Gets replaced by the user's ping |
 | {proxy_online} | Gets replaced by the total amount of players online (redis is supported) |
 | {proxy_max} | Gets replaced by the max players you have setup in your BungeeCord config |
+
+# User PlaceHolders
+| PlaceHolder | Explanation |
+| --- | --- |
+| {user} | Gets replaced by the name of this user |
+| {ping} | Gets replaced by the ping of this user |
+| {server} | Gets replaced by the server this user is currently in |
+| {language_short} | Gets replaced by the language of this user, formatted like "en" |
+| {language_long} | Gets replaced by the language of this user, formatted like "en_US" |
 
 # Punishment PlaceHolders
 | PlaceHolder | Explanation |
