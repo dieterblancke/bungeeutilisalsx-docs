@@ -145,6 +145,35 @@ Shows your ping, or the ping of another user towards the **BungeeCord**.
 **Default Permission:** bungeeutilisals.commands.ping <br>
 **Default Other Permission:** bungeeutilisals.commands.ping.other <br>
 
+## /domains
+**Aliases:** /domainlist
+**Default Permission:** bungeeutilisals.commands.domains
+
+### /domains list
+Lists the domains that have been used to connect to your server with the amount of unique connections.
+
+**Usage:** /domains list <br>
+**Aliases:** /domains ls, /domains all <br>
+**Default Permission:** bungeeutilisals.commands.domains.list <br>
+
+### /domains list
+Searches a domain in the list of domains that have been used to connect to your server.
+Only domains that contain the text you entered will be listed.
+
+**Usage:** /domains search <br>
+**Aliases:** /domains find, /domains select <br>
+**Default Permission:** bungeeutilisals.commands.domains.search <br>
+
+## /bhelpop (message) | /bhelpop reply (user) (message)
+Helpop will message the online staff that have a permission to receive the message.
+Helpop reply will allow you to reply to this user (only if you have the reply permission).
+
+**Usage:** /helpop (message) or /helpop reply (user) (message) <br>
+**Aliases:** /ghelpop <br>
+**Default Permission:** bungeeutilisals.commands.helpop
+**Default Receive Permission:** bungeeutilisals.commands.helpop.receive_broadcast
+**Default Reply Permission:** bungeeutilisals.commands.helpop.reply
+
 # Addon Commands
 ## /addon enable (name)
 Enables an addon that has a JAR file present, but isn't enabled yet.
