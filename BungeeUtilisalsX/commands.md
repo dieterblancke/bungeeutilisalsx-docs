@@ -157,22 +157,22 @@ Lists the domains that have been used to connect to your server with the amount 
 **Default Permission:** bungeeutilisals.commands.domains.list <br>
 
 ### /domains list
-Searches a domain in the list of domains that have been used to connect to your server.
+Searches a domain in the list of domains that have been used to connect to your server. <br>
 Only domains that contain the text you entered will be listed.
 
 **Usage:** /domains search <br>
 **Aliases:** /domains find, /domains select <br>
 **Default Permission:** bungeeutilisals.commands.domains.search <br>
 
-## /bhelpop (message) | /bhelpop reply (user) (message)
-Helpop will message the online staff that have a permission to receive the message.
+## /bhelpop (message) _or_ /bhelpop reply (user) (message)
+Helpop will message the online staff that have a permission to receive the message. <br>
 Helpop reply will allow you to reply to this user (only if you have the reply permission).
 
 **Usage:** /helpop (message) or /helpop reply (user) (message) <br>
 **Aliases:** /ghelpop <br>
-**Default Permission:** bungeeutilisals.commands.helpop
-**Default Receive Permission:** bungeeutilisals.commands.helpop.receive_broadcast
-**Default Reply Permission:** bungeeutilisals.commands.helpop.reply
+**Default Permission:** bungeeutilisals.commands.helpop <br>
+**Default Receive Permission:** bungeeutilisals.commands.helpop.receive_broadcast <br>
+**Default Reply Permission:** bungeeutilisals.commands.helpop.reply <br>
 
 # Addon Commands
 ## /addon enable (name)
