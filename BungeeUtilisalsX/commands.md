@@ -110,32 +110,46 @@ This command allows people to change their language to one of the languages supp
 **Default Permission:** bungeeutilisals.commands.language <br>
 
 ## /staff
-This is command shows the online staff per role. These roles can be installed in the commands/generalcommands.yml file.
+This command shows the online staff per role. These roles can be installed in the commands/generalcommands.yml file.
 
 **Usage:** /staff <br>
 **Aliases:** /onlinestaff <br>
 **Default Permission:** bungeeutilisals.commands.staff <br>
 
 ## /msg (user) (message)
-This is command allows you to send a PM to anyone who is online in the network (redis supported) (target must ofcourse not have ignored you).
+This command allows you to send a PM to anyone who is online in the network (redis supported) (target must ofcourse not have ignored you).
 
 **Usage:** /msg (user) (message) <br>
 **Aliases:** /m, /whisper <br>
 **Default Permission:** bungeeutilisals.commands.msg <br>
 
 ## /reply (message)
-This is command allows you to reply to the last person who sent you a PM.
+This command allows you to reply to the last person who sent you a PM.
 
 **Usage:** /reply (message) <br>
 **Aliases:** /r <br>
 **Default Permission:** bungeeutilisals.commands.reply <br>
 
 ## /ignore (add / remove / list) [user]
-This is command allows you to add / remove someone to / from your ignored members list. Or it lists the people you are ignoring.
+This command allows you to add / remove someone to / from your ignored members list. Or it lists the people you are ignoring.
 
 **Usage:** /ignore (add / remove / list) [user] <br>
 **Aliases:** /bignore <br>
 **Default Permission:** bungeeutilisals.commands.ignore <br>
+
+## /socialspy
+This command allows you to see private messages (/msg & /reply commands).
+
+**Usage:** /socialspy <br>
+**Aliases:** /ss, /sspy <br>
+**Default Permission:** bungeeutilisals.commands.socialspy <br>
+
+## /commandspy
+This command allows you to see commands people execute (ignored commands can be setup).
+
+**Usage:** /commandspy <br>
+**Aliases:** /cs, /cspy <br>
+**Default Permission:** bungeeutilisals.commands.commandspy <br>
 
 ## /ping [user]
 Shows your ping, or the ping of another user towards the **BungeeCord**.
