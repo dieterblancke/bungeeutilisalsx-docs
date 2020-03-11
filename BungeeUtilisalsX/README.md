@@ -15,7 +15,6 @@ A **list of addons** can be found [by clicking here.](https://forums.dbsoftwares
 We currently have the following addons:
 - [**AntiAFKAddon**](https://forums.dbsoftwares.eu/d/3-antiafk-addon) - This addon detects if an user is afk and provides an /afk command. It detects **movement (in bungeecord)**, commands & chat usage.
 - [**HubBalancerAddon**](https://forums.dbsoftwares.eu/d/4-hubbalancer-addon) - This addon provides a hub balancer, hub command and allows balancing between fallback servers.
-- **ScoreboardAddon**- This addon provides a hightly animatable, no-flicker, **asynchronous bungeecord** **scoreboard**.
 - **XMLPlaceHolderAddon**- Provides XML placeholders that allow you to have placeholders with input.
 - **ExtraPlaceHoldersAddon**- Adds additional placeholders to BungeeUtilisalsX that are not included in the main plugin.
 
@@ -23,10 +22,9 @@ We currently have the following addons:
 # Useful Links
 
 [![](https://i.imgur.com/4QxyURe.png)](https://discord.dbsoftwares.eu/)
-[![](https://i.imgur.com/l7ys9OG.png)](https://git.dbsoftwares.eu/dbsoftwares/BungeeUtilisalsX/wikis/home)
-[![](https://i.imgur.com/krx1GRR.png)](https://git.dbsoftwares.eu/dbsoftwares/BungeeUtilisalsX/wikis/Commands)
-[![](https://i.imgur.com/oBrmVB8.png)](https://git.dbsoftwares.eu/dbsoftwares/BungeeUtilisalsX/wikis/FAQ-&-Common-Issues)
-[![](https://i.imgur.com/gXpFBqN.png)](https://www.patreon.com/dbsoftwares)
+[![](https://i.imgur.com/l7ys9OG.png)](https://docs.dbsoftwares.eu/BungeeUtilisalsX/)
+[![](https://i.imgur.com/krx1GRR.png)](https://docs.dbsoftwares.eu/BungeeUtilisalsX/#/commands)
+[![](https://i.imgur.com/oBrmVB8.png)](https://docs.dbsoftwares.eu/BungeeUtilisalsX/#/faq)
 [![](https://i.imgur.com/8YiQPDr.png)](https://forums.dbsoftwares.eu/)
 
 # Test Server
@@ -37,6 +35,7 @@ You can test BungeeUtilisalsX on our test server: **test.dbsoftwares.eu**
 - Discord integration (a discord bot that would connect with BungeeUtilisals to have things like staff chat, stats, ... connected **[0 %]**
 - Party System **[0 %]**
 
+A complete list of planned features / fixes can be found in the [issues created by me on the Github Repository](https://github.com/dieterblancke/BungeeUtilisalsX/issues/created_by/dieterblancke).
 
 # Donate
 

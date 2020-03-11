@@ -241,173 +241,222 @@ Possible punishment formats:
   + 1sec
   + 2secs
 
-## /ban (user) (reason)
+## /ban
 This command permanently bans someone from the BungeeCord network.
 
 **Usage:** /ban (user) (reason) <br>
+**Per Server Usage:** /ban (user) (server) (reason) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
 **Aliases:** /pban, /gban <br>
+**Parameters:**
+* -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /ban didjee2 test -nbp
+* -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /ban didjee2 test -s <br>
 **Default Permission:** bungeeutilisals.punishments.ban <br>
 **Default Broadcast permission:** bungeeutilisals.punishments.ban.broadcast <br>
 
 When someone has the default broadcast permission, they will get a message when someone gets punished.
 
-## /ipban (user / IP) (reason)
+## /ipban
 This command permanently bans someone's ip from the BungeeCord network.
 
 **Usage:** /ipban (user / IP) (reason) <br>
+**Per Server Usage:** /ipban (user / IP) (server) (reason) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
 **Aliases:** /banip, /gbanip, /gipban <br>
+**Parameters:**
+* -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /ipban didjee2 test -nbp
+* -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /ipban didjee2 test -s <br>
 **Default Permission:** bungeeutilisals.punishments.ipban <br>
 **Default Broadcast permission:** bungeeutilisals.punishments.ipban.broadcast <br>
 
 When someone has the default broadcast permission, they will get a message when someone gets punished.
 
-## /tempban (user) (timeformat) (reason)
+## /tempban
 This command temporarily bans someone from the BungeeCord network.
 
 **Usage:** /tempban (user) (timeformat) (reason) <br>
+**Per Server Usage:** /tempban (user) (timeformat) (server) (reason) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
 **Aliases:** /tban, /gtban <br>
+**Parameters:**
+* -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /tempban didjee2 1d test -nbp
+* -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /tempban didjee2 test -s <br>
 **Default Permission:** bungeeutilisals.punishments.tempban <br>
 **Default Broadcast permission:** bungeeutilisals.punishments.tempban.broadcast <br>
 
 When someone has the default broadcast permission, they will get a message when someone gets punished.
 
-## /iptempban (user / IP) (timeformat) (reason)
+## /iptempban
 This command temporarily bans someone's ip from the BungeeCord network.
 
 **Usage:** /iptempban (user / IP) (timeformat) (reason) <br>
+**Per Server Usage:** /iptempban (user) (timeformat) (server) (reason) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
 **Aliases:** /iptempban, /tipban, /gtipban, /tbanip <br>
+**Parameters:**
+* -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /iptempban didjee2 1d test -nbp
+* -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /iptempban didjee2 test -s <br>
 **Default Permission:** bungeeutilisals.punishments.tempbanip <br>
 **Default Broadcast permission:** bungeeutilisals.punishments.tempbanip.broadcast <br>
 
 When someone has the default broadcast permission, they will get a message when someone gets punished.
 
-## /mute (user) (reason)
+## /mute
 This command permanently mutes someone from the BungeeCord network.
 
 **Usage:** /mute (user) (reason) <br>
+**Per Server Usage:** /mute (user) (server) (reason) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
 **Aliases:** /pmute, /gmute <br>
+**Parameters:**
+* -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /mute didjee2 test -nbp
+* -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /mute didjee2 test -s <br>
 **Default Permission:** bungeeutilisals.punishments.mute <br>
 **Default Broadcast permission:** bungeeutilisals.punishments.mute.broadcast <br>
 
 When someone has the default broadcast permission, they will get a message when someone gets punished.
 
-## /ipmute (user / IP) (reason)
+## /ipmute
 This command permanently mutes someone's ip from the BungeeCord network.
 
 **Usage:** /ipmute (user / IP) (reason) <br>
+**Per Server Usage:** /ipmute (user / IP) (server) (reason) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
 **Aliases:** /muteip, /gmuteip, /gipmute <br>
+**Parameters:**
+* -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /ipmute didjee2 test -nbp
+* -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /ipmute didjee2 test -s <br>
 **Default Permission:** bungeeutilisals.punishments.ipmute <br>
 **Default Broadcast permission:** bungeeutilisals.punishments.ipmute.broadcast <br>
 
 When someone has the default broadcast permission, they will get a message when someone gets punished.
 
-## /tempmute (user) (timeformat) (reason)
+## /tempmute
 This command temporarily mutes someone from the BungeeCord network.
 
 **Usage:** /tempmute (user) (timeformat) (reason) <br>
+**Per Server Usage:** /tempmute (user) (timeformat) (server) (reason) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
 **Aliases:** /tmute, /gtmute <br>
+**Parameters:**
+* -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /tempmute didjee2 1d test -nbp
+* -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /tempmute didjee2 test -s <br>
 **Default Permission:** bungeeutilisals.punishments.tempmute <br>
 **Default Broadcast permission:** bungeeutilisals.punishments.tempmute.broadcast <br>
 
 When someone has the default broadcast permission, they will get a message when someone gets punished.
 
-## /iptempmute (user / IP) (timeformat) (reason)
+## /iptempmute
 This command temporarily mutes someone's ip from the BungeeCord network.
 
 **Usage:** /iptempmute (user / IP) (timeformat) (reason) <br>
+**Per Server Usage:** /iptempmute (user / IP) (timeformat) (server) (reason) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
 **Aliases:** /iptempmute, /tipmute, /gtipmute, /tmuteip <br>
+**Parameters:**
+* -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /iptempmute didjee2 1d test -nbp
+* -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /iptempmute didjee2 test -s <br>
 **Default Permission:** bungeeutilisals.punishments.tempmuteip <br>
 **Default Broadcast permission:** bungeeutilisals.punishments.tempmuteip.broadcast <br>
 
 When someone has the default broadcast permission, they will get a message when someone gets punished.
 
-## /kick (user) (reason)
+## /kick
 This command kicks someone from the BungeeCord network.
 
 **Usage:** /kick (user) (reason) <br>
+**Parameters:**
+* -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /kick didjee2 test -nbp
+* -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /kick didjee2 test -s <br>
 **Default Permission:** bungeeutilisals.punishments.kick <br>
 **Default Broadcast permission:** bungeeutilisals.punishments.kick.broadcast <br>
 
 When someone has the default broadcast permission, they will get a message when someone gets punished.
 
-## /warn (user) (reason)
+## /warn
 This command warns someone on the BungeeCord network.
 
 **Usage:** /warn (user) (reason) <br>
+**Parameters:**
+* -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /warn didjee2 test -nbp
+* -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /warn didjee2 test -s <br>
 **Default Permission:** bungeeutilisals.punishments.warn <br>
 **Default Broadcast permission:** bungeeutilisals.punishments.warn.broadcast <br>
 
 When someone has the default broadcast permission, they will get a message when someone gets punished.
 
-## /unban (user)
+## /unban
 This command unbans someone from the BungeeCord network.
 
 **Usage:** /unban (user) <br>
+**Per Server Usage:** /unban (user) (server) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
 **Aliases:** /punban, /gunban, /unsetban, /removeban <br>
+**Parameters:**
+* -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /unban didjee2 -nbp
+* -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /unban didjee2 -s <br>
 **Default Permission:** bungeeutilisals.punishments.unban <br>
 **Default Broadcast permission:** bungeeutilisals.punishments.unban.broadcast <br>
 
 When someone has the default broadcast permission, they will get a message when someone gets punished.
 
-## /unbanip (user / IP)
+## /unbanip
 This command unbans someone's ip from the BungeeCord network.
 
 **Usage:** /unbanip (user / IP) <br>
+**Per Server Usage:** /unbanip (user / IP) (server) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
 **Aliases:** /punbanip, /gunbanip, /unsetbanip, /removebanip <br>
+* -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /unbanip didjee2 -nbp
+* -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /unbanip didjee2 -s <br>
 **Default Permission:** bungeeutilisals.punishments.unbanip <br>
 **Default Broadcast permission:** bungeeutilisals.punishments.unbanip.broadcast <br>
 
 When someone has the default broadcast permission, they will get a message when someone gets punished.
 
-## /unmute (user)
+## /unmute
 This command unmutes someone from the BungeeCord network.
 
-**Usage:** /unmute (user) <br>
+**Usage:** /unmute (user) 
+**Per Server Usage:** /unmute (user) (server) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
 **Aliases:** /punmute, /gunmute, /unsetmute, /removemute <br>
+* -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /unmute didjee2 -nbp
+* -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /unmute didjee2 -s <br>
 **Default Permission:** bungeeutilisals.punishments.unmute <br>
 **Default Broadcast permission:** bungeeutilisals.punishments.unmute.broadcast <br>
 
 When someone has the default broadcast permission, they will get a message when someone gets punished.
 
-## /unmuteip (user / IP)
+## /unmuteip
 This command unmutes someone's ip from the BungeeCord network.
 
 **Usage:** /unmuteip (user / IP) <br>
+**Per Server Usage:** /unmuteip (user / IP) (server) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
 **Aliases:** /punmuteip, /gunmuteip, /unsetmuteip, /removemuteip <br>
+* -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /unmuteip didjee2 -nbp
+* -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /unmuteip didjee2 -s <br>
 **Default Permission:** bungeeutilisals.punishments.unmuteip <br>
 **Default Broadcast permission:** bungeeutilisals.punishments.unmuteip.broadcast <br>
 
 When someone has the default broadcast permission, they will get a message when someone gets punished.
 
-## /punishmentinfo (user) [type / all]
+## /punishmentinfo
 This command shows info about the punishments a certain user currently has.
 
-**Usage:** /punishmentinfo (user) [type / all] <br>
+**Usage:** /punishmentinfo (user) [type / all] [page] <br>
 **Aliases:** /pinfo <br>
 **Default Permission:** bungeeutilisals.punishments.punishmentinfo <br>
-**Default Broadcast permission:** bungeeutilisals.punishments.punishmentinfo.broadcast <br>
 
-When someone has the default broadcast permission, they will get a message when someone gets punished.
-
-## /punishmenthistory (user) [type / all] [page]
+## /punishmenthistory
 This command shows info about the punishment history of a certain user.
 
 **Usage:** /punishmenthistory (user) [type / all] [page] <br>
 **Aliases:** /phistory <br>
 **Default Permission:** bungeeutilisals.punishments.punishmenthistory <br>
-**Default Broadcast permission:** bungeeutilisals.punishments.punishmenthistory.broadcast <br>
 
-When someone has the default broadcast permission, they will get a message when someone gets punished.
-
-## /punishmentdata (type) (id)
+## /punishmentdata
 This command shows info about a certain punishment id.
 
 **Usage:** /punishmentdata (type) (id) <br>
 **Aliases:** /pdata <br>
 **Default Permission:** bungeeutilisals.punishments.punishmentdata <br>
-**Default Broadcast permission:** bungeeutilisals.punishments.punishmentdata.broadcast <br>
 
-When someone has the default broadcast permission, they will get a message when someone gets punished.
+## /staffhistory
+This command shows info about the punishments that have been **executed** by a certain user.
+
+**Usage:** /staffhistory (user) [type / all] [page] <br>
+**Aliases:** /shistory <br>
+**Default Permission:** bungeeutilisals.punishments.staffhistory <br>
 
 # Friend Commands
 ## /friend add (user)
