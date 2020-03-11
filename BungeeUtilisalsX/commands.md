@@ -145,7 +145,7 @@ This command allows you to see private messages (/msg & /reply commands).
 **Default Permission:** bungeeutilisals.commands.socialspy <br>
 
 ## /commandspy
-This command allows you to see commands people execute (ignored commands can be setup).
+This command allows you to see commands people execute (ignored commands can be setup). 
 
 **Usage:** /commandspy <br>
 **Aliases:** /cs, /cspy <br>
