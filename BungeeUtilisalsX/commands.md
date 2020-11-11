@@ -1,5 +1,7 @@
 # Commands
 
+Please note that the permissions and command list may be outdated. For a full list of commands and permissions, please check the configuration files as everything is fully configurable!
+
 # Legenda
 - ( argument ) = a required argument
 - [ argument ] = an optional argument
