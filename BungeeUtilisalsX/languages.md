@@ -32,9 +32,9 @@ Yes, BungeeUtilisalsX **does support** hex color codes, but only with BungeeCord
 ### Gradient colors
 BungeeUtilisalsX also has support for "gradient colors", all the text in between two gradient colors will have the first color slowly fade into the second color.
 
-The format for gradient colors is as follows: `<$#HEX_COLOR_1>text<$#HEX_COLOR_2>`. For example, if we set these gradient colors on the no-permission message as follows:
+The format for gradient colors is as follows: `<$#HEX_COLOR_1>text</$#HEX_COLOR_2>`. For example, if we set these gradient colors on the no-permission message as follows:
 ```yaml
-no-permission: '<$#FF0000>You do not have the permission to do this!<$#FFAE00>'
+no-permission: '<$#FF0000>You do not have the permission to do this!</$#FFAE00>'
 ```
 This will result in your no permission message being displayed as follows: <br />
 ![](https://i.imgur.com/NXh1Fby.png)
