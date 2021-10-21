@@ -190,42 +190,6 @@ Helpop reply will allow you to reply to this user (only if you have the reply pe
 **Default Receive Permission:** bungeeutilisals.commands.helpop.receive_broadcast <br>
 **Default Reply Permission:** bungeeutilisals.commands.helpop.reply <br>
 
-# Addon Commands
-## /addon enable (name)
-Enables an addon that has a JAR file present, but isn't enabled yet.
-
-**Permission:** bungeeutilisals.admin.addons.enable
-
-## /addon disable (name)
-Disables an addon, but doesn't remove the files it has.
-
-**Permission:** bungeeutilisals.admin.addons.disable
-
-## /addon info (name)
-Shows information about an addon.
-
-**Permission:** bungeeutilisals.admin.addons.info
-
-## /addon list
-Shows all exising addons, and whether or not they are installed & enabled.
-
-**Permission:** bungeeutilisals.admin.addons.list
-
-## /addon install (addon)
-Installs an addon from our web api, and enables it.
-
-**Permission:** bungeeutilisals.admin.addons.install
-
-## /addon uninstall (addon)
-Uninstalls an addon (by removing the jar file) and disables it.
-
-**Permission:** bungeeutilisals.admin.addons.uninstall
-
-## /addon reload (addon)
-Reloads an addon.
-
-**Permission:** bungeeutilisals.admin.addons.reload
-
 # Punishment Commands
 Possible punishment formats:
 - Year formats:
