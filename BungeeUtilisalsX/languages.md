@@ -79,3 +79,51 @@ friends:
 
 In the second example there is a parent section "text:" which contains a list of other text sections while in the first example the "text:" section only has a string as value.
 Both will work, but the second example will allow for custom hover and click events for each section you define while the first example only allows a hover and click event for the entire message.
+
+### Text section message sounds
+Each text section can also be assigned a sound that should be played when the message is built.
+
+This is just a "sound" section on the same level as text, hover and click and is optional. For this to work, you need to have the plugin "[Protocolize](https://www.spigotmc.org/resources/protocolize-protocollib-for-bungeecord-waterfall-velocity.63778/)" installed.
+
+A list of sounds can be found online, on sites like [these](https://www.andre601.ch/Spigot-Sounds/), just make sure to type both the sound and the category in UPPER CASE.
+The following categories can be used: MASTER, MUSIC, RECORDS, WEATHER, BLOCKS, HOSTILE, NEUTRAL, PLAYERS, AMBIENT, VOICE
+
+Sound example:
+```yaml
+friends:
+  list:
+    format:
+      text: '- &b{friendName} - &7{lastOnline}'
+      hover:
+        - '&eOnline: &b{online}'
+        - '&eFriends since: &b{friendSince}'
+        - '&eLast seen: &b{lastOnline}'
+      click:
+        # OPEN_URL, RUN_COMMAND, SUGGEST_COMMAND
+        # RUN_COMMAND will only work for BungeeCord commands.
+        type: 'SUGGEST_COMMAND'
+        action: '/friend msg {friendName} '
+      sound:
+        sound: BLOCK_NOTE_BLOCK_PLING
+        category: MASTER
+        volume: 20
+        pitch: 1
+```
+
+Or, what also works if you want to use the master category with volume and pitch on 1:
+```yaml
+friends:
+  list:
+    format:
+      text: '- &b{friendName} - &7{lastOnline}'
+      hover:
+        - '&eOnline: &b{online}'
+        - '&eFriends since: &b{friendSince}'
+        - '&eLast seen: &b{lastOnline}'
+      click:
+        # OPEN_URL, RUN_COMMAND, SUGGEST_COMMAND
+        # RUN_COMMAND will only work for BungeeCord commands.
+        type: 'SUGGEST_COMMAND'
+        action: '/friend msg {friendName} '
+      sound: BLOCK_NOTE_BLOCK_PLING
+```
