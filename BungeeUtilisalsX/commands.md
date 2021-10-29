@@ -1,556 +1,951 @@
 # Commands
 
-Please note that the permissions and command list may be outdated. For a full list of commands and permissions, please check the configuration files as everything is fully configurable!
+All commands in this list can be enabled / disabled or changed. Each (sub)command name, alias, permission, ... can be changed to your liking.
+Each message can also be changed as you please!
 
-# Legenda
-- ( argument ) = a required argument
-- [ argument ] = an optional argument
+The most obvious commands don't have screenshots included in order to limit the amount of images,
+you can also test everything on my test server: test.dieterblancke.xyz!
+* ( argument ) stands for a required argument
+* [ argument ] stands for an optional argument
+* < argument > stands for a required argument based on a configuration variable
 
-# General Commands
+## Table of Contents
+- [/bungeeutilisals](#bungeeutilisals)
+- [/bungeeutilisals version](#bungeeutilisals-version)
+- [/bungeeutilisals reload](#bungeeutilisals-reload)
+- [/bungeeutilisals dump](#bungeeutilisals-dump)
+- [/server](#server)
+- [/announce](#announce)
+- [/find](#find)
+- [/glag](#glag)
+- [/clearchat](#clearchat)
+- [/bhelpop](#bhelpop)
+- [/ping](#ping)
+- [/language](#language)
+- [/glist](#glist)
+- [/shout](#shout)
+- [/socialspy](#socialspy)
+- [/commandspy](#commandspy)
+- [/msg](#msg)
+- [/reply](#reply)
+- [/ignore](#ignore)
+- [/msgtoggle](#msgtoggle)
+- [/report](#report)
+- [/report create](#report-create)
+- [/report list](#report-list)
+- [/report accept](#report-accept)
+- [/report deny](#report-deny)
+- [/report history](#report-history)
+- [/chatlock](#chatlock)
+- [/staffchat](#staffchat)
+- [/domains](#domains)
+- [/domains list](#domains-list)
+- [/domains search](#domains-search)
+- [/staffannouncement](#staffannouncement)
+- [/friends](#friends)
+- [/friends add](#friends-add)
+- [/friends accept](#friends-accept)
+- [/friends deny](#friends-deny)
+- [/friends removerequest](#friends-removerequest)
+- [/friends remove](#friends-remove)
+- [/friends list](#friends-list)
+- [/friends requests](#friends-requests)
+- [/friends msg](#friends-msg)
+- [/friends reply](#friends-reply)
+- [/friends settings](#friends-settings)
+- [/friends broadcast](#friends-broadcast)
+- [/ban](#ban)
+- [/ipban](#ipban)
+- [/tempban](#tempban)
+- [/iptempban](#iptempban)
+- [/mute](#mute)
+- [/ipmute](#ipmute)
+- [/tempmute](#tempmute)
+- [/iptempmute](#iptempmute)
+- [/kick](#kick)
+- [/warn](#warn)
+- [/unban](#unban)
+- [/unbanip](#unbanip)
+- [/unmute](#unmute)
+- [/unmuteip](#unmuteip)
+- [/punishmentinfo](#punishmentinfo)
+- [/punishmenthistory](#punishmenthistory)
+- [/punishmentdata](#punishmentdata)
+- [/checkip](#checkip)
+- [/staffhistory](#staffhistory)
+- [/trackpunish](#trackpunish)
+- [/staffrollback](#staffrollback)
+
 ## /bungeeutilisals
-**Usage:** /bungeeutilisals<br>
-**Aliases:** /bu, /butili, /butilisals <br>
-**Permission:** bungeeutilisals.admin <br>
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /bungeeutilisals | /bux, /bu, /bungeeutilisalsx | bungeeutilisals.commands.admin |
+
+**Usage:** /bungeeutilisals
+
+**Description:** The default / admin command to help manage the plugin.
 
 ### /bungeeutilisals version
-**Permission:** bungeeutilisals.admin.version <br>
-Shows you the version you are currently running on.
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /bungeeutilisals version |  | bungeeutilisals.commands.admin.version |
+
+**Usage:** /bungeeutilisals version
+
+**Description:** Prints the current BungeeUtilisalsX version in your chat.
 
 ### /bungeeutilisals reload
-**Permission:** bungeeutilisals.admin.reload <br>
-Reloads the plugin
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /bungeeutilisals reload |  | bungeeutilisals.commands.admin.reload |
+
+**Usage:** /bungeeutilisals reload
+
+**Description:** Reloads all configuration files and most systems of BungeeUtilisalsX.
 
 ### /bungeeutilisals dump
-**Permission:** bungeeutilisals.admin.dump <br>
 
-Creates a dump on https://paste.dbsoftwares.eu with information that can be useful for an issue.
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /bungeeutilisals dump |  | bungeeutilisals.commands.admin.dump |
 
-### /bungeeutilisals convert (oldtype) [properties]
-**Permission:** bungeeutilisals.admin.convert <br>
-Allows you to convert plugin data when you switch storage type.
+**Usage:** /bungeeutilisals dump
 
-Example: /bungeeutilisals convert MYSQL host:127.0.0.1,port:3306,database:bu_old,username:bungeeutilisals,password:test <br>
-This example will convert from MySQL (with the given properties) to the current storage implementation.
+**Description:** Dumps proxy and system information to paste.dieterblancke.xyz. This can be useful when making an issue.
 
-### /bungeeutilisals import (plugin) [properties]
-**Permission:** bungeeutilisals.admin.import <br>
-Allows you to import plugin data when you switch storage type. <br>
-**Supported plugins:** BungeeUtilisals (old version), BungeeAdminTools
+## /server
 
-Example: /bungeeutilisals import BAT host:127.0.0.1,port:3306,database:bu_old,username:bungeeutilisals,password:test <br>
-This example will import data from BungeeAdminTools (with the given properties) to the current storage implementation.
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /server | /switch | bungeeutilisals.commands.server |
 
-## /glist
-This is a customizable alternative for the default /glist command, with redis support. **Note:** Make sure to remove the glist module.
+**Usage:** /server [user] (serverName)
 
-**Usage:** /glist <br>
-**Aliases:** /blist, /globallist <br>
-**Default Permission:** bungeeutilisals.commands.glist <br>
+**Description:** Allows you to switch yourself, or someone else, to another server.
 
-## /announce (p/b/c/a/t) (message)
-This is an 'upgraded' alternative for the default /alert command, as this allows you to broadcast a chat, title, bossbar and / or actionbar message throughout your server.
+## /announce
 
-**Types explanation:**
-- p: preconfigured, this is the path to the preconfigured message in the languages file (this also allows an alert to be multilingual), by default, */announce p welcome* should work
-- c: chat
-- t: title, to split a title into a title and subtitle you can use %sub%, so for example: &c&lBungeeUtilisalsX %sub%&eThank you for using our plugin!
-- b: bossbar
-- a: actionbar
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /announce | /alert, /bigalert | bungeeutilisals.commands.announce |
 
-**Usage:** /announce (p/b/c/a/t) (message) <br>
-**Aliases:** /blist, /globallist <br>
-**Default Permission:** bungeeutilisals.commands.glist <br>
+**Usage:** /announce (p/b/c/a/t) (message)
 
-## /find (user)
-This is a customizable alternative for the default /find command, with redis support. **Note:** Make sure to remove the find module.
+**Description:** Announces a message globally (similarly to alert). This can be done over chat, title, actionbar and bossbar.
+Title and subtitles can be split using %sub%.
+If a default type is set up in the config, a type can still be overridden by using type:(types) as first parameter.
+Types can be concatinated, for example 'bcat' will announce bossbar, chat, actionbar and title at the same time.
 
-**Usage:** /find (user) <br>
-**Aliases:** /search <br>
-**Default Permission:** bungeeutilisals.commands.find <br>
+**Images:**
 
-## /server (server)
-This is a customizable alternative for the default /server command. **Note:** Make sure to remove the server module.
+<div class="imagelist">
+	<img src="https://i.imgur.com/tbDWLQs.png" alt="/announce images"/>
+	<img src="https://i.imgur.com/owmvMA7.png" alt="/announce images"/>
+	<img src="https://i.imgur.com/aN250KS.png" alt="/announce images"/>
+</div>
 
-**Usage:** /server (server) <br>
-**Aliases:** /switch <br>
-**Default Permission:** bungeeutilisals.commands.server <br>
+## /find
 
-## /clearchat (local / global)
-This command allows you to clear the chat of the entire network, or of the server you are in.
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /find | /search | bungeeutilisals.commands.find |
 
-**Usage:** /clearchat (local / global) <br>
-**Aliases:** /cc <br>
-**Default Permission:** bungeeutilisals.commands.clearchat <br>
+**Usage:** /find (user)
 
-## /chatlock (local / global)
-This command allows you to lock the chat of the entire network, or of the server you are in.
-
-**Usage:** /chatlock (local / global) <br>
-**Aliases:** /cl, /lock, /lockchat <br>
-**Default Permission:** bungeeutilisals.commands.chatlock <br>
-**Default Bypass Permission:** bungeeutilisals.chatlock.bypass <br>
+**Description:** Finds the server the given user currently is in.
 
 ## /glag
-This command shows you basic statistics of your server, such as tps, max, free and total memory and last startup timestamp.
 
-**Usage:** /glag <br>
-**Aliases:** /bgc, /blag <br>
-**Default Permission:** bungeeutilisals.commands.glag <br>
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /glag | /bgc, /blag | bungeeutilisals.commands.glag |
 
-## /staffchat
-This command allows staff to communicate with eachother in a separate staff chat.
+**Usage:** /glag
 
-**Usage:** /staffchat <br>
-**Aliases:** /sc, /schat <br>
-**Default Permission:** bungeeutilisals.commands.staffchat <br>
+**Description:** Gives you some basic information about the current proxy (online time and memory usage).
 
-## /language (language)
-This command allows people to change their language to one of the languages supported by the plugin.
+**Images:**
 
-**Usage:** /language (language) <br>
-**Aliases:** /lang <br>
-**Default Permission:** bungeeutilisals.commands.language <br>
+<div class="imagelist">
+	<img src="https://i.imgur.com/XNnxrqq.png" alt="/glag images"/>
+</div>
 
-## /staff
-This command shows the online staff per role. These roles can be installed in the commands/generalcommands.yml file.
+## /clearchat
 
-**Usage:** /staff <br>
-**Aliases:** /onlinestaff <br>
-**Default Permission:** bungeeutilisals.commands.staff <br>
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /clearchat | /cc | bungeeutilisals.commands.clearchat |
 
-## /msg (user) (message)
-This command allows you to send a PM to anyone who is online in the network (redis supported) (target must ofcourse not have ignored you).
+**Usage:** /clearchat (server / ALL)
 
-**Usage:** /msg (user) (message) <br>
-**Aliases:** /m, /whisper <br>
-**Default Permission:** bungeeutilisals.commands.msg <br>
+**Description:** Clears the chat globally or in a specfic server.
 
-## /reply (message)
-This command allows you to reply to the last person who sent you a PM.
+## /bhelpop
 
-**Usage:** /reply (message) <br>
-**Aliases:** /r <br>
-**Default Permission:** bungeeutilisals.commands.reply <br>
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /bhelpop | /ghelpop | bungeeutilisals.commands.helpop |
 
-## /ignore (add / remove / list) [user]
-This command allows you to add / remove someone to / from your ignored members list. Or it lists the people you are ignoring.
+**Usage:** /helpop [reply] (message)
 
-**Usage:** /ignore (add / remove / list) [user] <br>
-**Aliases:** /bignore <br>
-**Default Permission:** bungeeutilisals.commands.ignore <br>
+**Description:** Sends a helpop message to the online staff. Staff can reply using /helpop reply (user) (message).
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/YAxhwzb.png" alt="/bhelpop images"/>
+</div>
+
+## /ping
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /ping | /gping, /bping | bungeeutilisals.commands.ping |
+
+**Usage:** /ping [user]
+
+**Description:** Shows your (or someone else's) current ping towards the current proxy.
+
+## /language
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /language | /lang | bungeeutilisals.commands.language |
+
+**Usage:** /language (language)
+
+**Description:** Changes your current language.
+
+## /glist
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /glist | /blist, /globallist | bungeeutilisals.commands.glist |
+
+**Usage:** /glist
+
+**Description:** Lists the players online on each server in a very configurable way, with multi proxy support.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/A8HjCM3.png" alt="/glist images"/>
+	<img src="https://i.imgur.com/mBoXqyY.png" alt="/glist images"/>
+</div>
+
+## /shout
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /shout | /sh | bungeeutilisals.commands.shout |
+
+**Usage:** /shout (message)
+
+**Description:** Sends a global shout. This is a simplified version of /announce that can be used as a donator perk. Staff can have a custom shout format.
 
 ## /socialspy
-This command allows you to see private messages (/msg & /reply commands).
 
-**Usage:** /socialspy <br>
-**Aliases:** /ss, /sspy <br>
-**Default Permission:** bungeeutilisals.commands.socialspy <br>
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /socialspy | /ss, /sspy | bungeeutilisals.commands.socialspy |
+
+**Usage:** /socialspy
+
+**Description:** Toggles social spy for the current session. This will allow you to see all private messages that are being sent.
 
 ## /commandspy
-This command allows you to see commands people execute (ignored commands can be setup). 
 
-**Usage:** /commandspy <br>
-**Aliases:** /cs, /cspy <br>
-**Default Permission:** bungeeutilisals.commands.commandspy <br>
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /commandspy | /cs, /cspy | bungeeutilisals.commands.commandspy |
 
-## /ping [user]
-Shows your ping, or the ping of another user towards the **BungeeCord**.
+**Usage:** /commandspy
 
-**Usage:** /ping [user] <br>
-**Aliases:** /gping, /bping <br>
-**Default Permission:** bungeeutilisals.commands.ping <br>
-**Default Other Permission:** bungeeutilisals.commands.ping.other <br>
+**Description:** Toggles command spy for the current session. This will allow you to see all commands that are being executed.
+
+## /msg
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /msg | /m, /whisper | bungeeutilisals.commands.msg |
+
+**Usage:** /msg (user) (message)
+
+**Description:** Sends a private message to a user.
+
+## /reply
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /reply | /r | bungeeutilisals.commands.reply |
+
+**Usage:** /reply (message)
+
+**Description:** Sends a reply to the user you lastly interacted privately with.
+
+## /ignore
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /ignore | /bignore | bungeeutilisals.commands.ignore |
+
+**Usage:** /ignore (add/remove/list) [user]
+
+**Description:** Ignores private messages and friend requests from a user.
+
+## /msgtoggle
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /msgtoggle | /msgt | bungeeutilisals.commands.msgtoggle |
+
+**Usage:** /msgtoggle
+
+**Description:** Allows you to toggle private messages for the current session (will re-enable on rejoin).
+
+## /report
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /report | /greport, /breport | bungeeutilisals.commands.report |
+
+**Usage:** /report
+
+**Description:** This command sends a list of available report commands.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/Yj3Hh7z.png" alt="/report images"/>
+</div>
+
+### /report create
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /report create | /report new, /report c | bungeeutilisals.commands.report.create |
+
+**Usage:** /report create (user) (reason)
+
+**Description:** Creates a new report against a user with a given description.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/7ULcefN.png" alt="/report create images"/>
+</div>
+
+### /report list
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /report list | /report list, /report l | bungeeutilisals.commands.report.list |
+
+**Usage:** /report list [all / denied / accepted / active] [page]
+
+**Description:** Lists all active reports or all reports of a given type.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/QfiOSoN.png" alt="/report list images"/>
+	<img src="https://i.imgur.com/G1McUUc.png" alt="/report list images"/>
+</div>
+
+### /report accept
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /report accept |  | bungeeutilisals.commands.report.accept |
+
+**Usage:** /report accept (id)
+
+**Description:** Accepts a report with a given id. This will notify the reporter.
+
+### /report deny
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /report deny |  | bungeeutilisals.commands.report.deny |
+
+**Usage:** /report deny (id)
+
+**Description:** Denies a report with a given id.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/0FT1oo8.png" alt="/report deny images"/>
+</div>
+
+### /report history
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /report history | /report hist | bungeeutilisals.commands.report.history |
+
+**Usage:** /reports history [page]
+
+**Description:** Lists all reports you have created in the past.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/xhVmfxv.png" alt="/report history images"/>
+</div>
+
+## /chatlock
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /chatlock | /cl, /lock, /lockchat | bungeeutilisals.commands.chatlock |
+
+**Usage:** /chatlock (server / ALL)
+
+**Description:** Locks the chat globally or in a specfic server.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/hCoX27y.png" alt="/chatlock images"/>
+</div>
+
+## /staffchat
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /staffchat | /sc, /schat | bungeeutilisals.commands.staffchat |
+
+**Usage:** /staffchat [message]
+
+**Description:** Toggles your chat mode into staff chat mode, only people with a given permission can then see your messages.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/cFxsm2L.png" alt="/staffchat images"/>
+</div>
 
 ## /domains
-**Aliases:** /domainlist
-**Default Permission:** bungeeutilisals.commands.domains
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /domains | /domainlist | bungeeutilisals.commands.domains |
+
+**Usage:** /domains
+
+**Description:** This command allows you to see on what domains users first joined. This might not work when behind another proxy.
 
 ### /domains list
-Lists the domains that have been used to connect to your server with the amount of unique connections.
 
-**Usage:** /domains list <br>
-**Aliases:** /domains ls, /domains all <br>
-**Default Permission:** bungeeutilisals.commands.domains.list <br>
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /domains list | /domains ls, /domains all | bungeeutilisals.commands.domains.list |
 
-### /domains list
-Searches a domain in the list of domains that have been used to connect to your server. <br>
-Only domains that contain the text you entered will be listed.
+**Usage:** /domains list
 
-**Usage:** /domains search <br>
-**Aliases:** /domains find, /domains select <br>
-**Default Permission:** bungeeutilisals.commands.domains.search <br>
+**Description:** Lists all domains that have been used to join your network. This can also show how many people joined on the domain in total and how many are online right now.
 
-## /bhelpop (message) or /bhelpop reply (user) (message)
-Helpop will message the online staff that have a permission to receive the message. <br>
-Helpop reply will allow you to reply to this user (only if you have the reply permission).
+### /domains search
 
-**Usage:** /helpop (message) or /helpop reply (user) (message) <br>
-**Aliases:** /ghelpop <br>
-**Default Permission:** bungeeutilisals.commands.helpop <br>
-**Default Receive Permission:** bungeeutilisals.commands.helpop.receive_broadcast <br>
-**Default Reply Permission:** bungeeutilisals.commands.helpop.reply <br>
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /domains search | /domains find, /domains select | bungeeutilisals.commands.domains.search |
 
-# Punishment Commands
-Possible punishment formats:
-- Year formats:
-  + 1y
-  + 1year
-  + 2years
-- Month formats:
-  + 1mo
-  + 1month
-  + 2months
-- Week formats:
-  + 1w
-  + 1week
-  + 2weeks
-- Day formats:
-  + 1d
-  + 1day
-  + 2days
-- Hour formats:
-  + 1h
-  + 1hour
-  + 2hours
-- Minute formats:
-  + 1m
-  + 1min
-  + 2mins
-- Second formats:
-  + 1s
-  + 1sec
-  + 2secs
+**Usage:** /domains search (input)
+
+**Description:** Searches domain details for one specific domain, this works similar to /domains list, but instead of all domains it only shows domains that match your input.
+
+## /staffannouncement
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /staffannouncement | /sa, /staffannounce | bungeeutilisals.commands.staffannouncement.send |
+
+**Usage:** /staffannouncement (message)
+
+**Description:** Sends an announcement only to people that have a specific permission.
+
+## /friends
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /friends | /friend, /bfriends | bungeeutilisals.friends |
+
+**Usage:** /friends
+
+**Description:** This command either sends a list of available friends commands, or it opens a GUI.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/QIZxT2v.png" alt="/friends images"/>
+	<img src="https://i.imgur.com/Fq4skEB.png" alt="/friends images"/>
+</div>
+
+### /friends add
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /friends add | /friends send, /friends request | bungeeutilisals.friends.add |
+
+**Usage:** /friend add (user)
+
+**Description:** Adds a friend to your friends list. If this user has an outstanding friend request towards you, this request will be accepted.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/RvtnG0o.png" alt="/friends add images"/>
+	<img src="https://i.imgur.com/UpClGJH.png" alt="/friends add images"/>
+</div>
+
+### /friends accept
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /friends accept | /friends approve | bungeeutilisals.friends.accept |
+
+**Usage:** /friend accept (user)
+
+**Description:** Accepts an outstanding incoming friend request.
+
+### /friends deny
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /friends deny |  | bungeeutilisals.friends.deny |
+
+**Usage:** /friend deny (user)
+
+**Description:** Denies an incoming friend request.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/4mn5TLY.png" alt="/friends deny images"/>
+	<img src="https://i.imgur.com/hz5CB2Q.png" alt="/friends deny images"/>
+</div>
+
+### /friends removerequest
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /friends removerequest | /friends rr | bungeeutilisals.friends.removerequest |
+
+**Usage:** /friend removerequest (user)
+
+**Description:** Removes an outstanding friend request from / towards a certain user.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/kvf7tLF.png" alt="/friends removerequest images"/>
+	<img src="https://i.imgur.com/qHREX5n.png" alt="/friends removerequest images"/>
+</div>
+
+### /friends remove
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /friends remove | /friends delete, /friends del | bungeeutilisals.friends.remove |
+
+**Usage:** /friend remove (user)
+
+**Description:** Removes a friend from your friends list. If this user has an outstanding friend request towards you, this request will be denied.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/ZTlZlEN.png" alt="/friends remove images"/>
+	<img src="https://i.imgur.com/wTtYthk.png" alt="/friends remove images"/>
+</div>
+
+### /friends list
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /friends list | /friends fl | bungeeutilisals.friends.list |
+
+**Usage:** /friend list [page]
+
+**Description:** Lists your current friends.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/MUKiy9p.png" alt="/friends list images"/>
+</div>
+
+### /friends requests
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /friends requests | /friends req | bungeeutilisals.friends.requests |
+
+**Usage:** /friend requests (in / out) [page]
+
+**Description:** Lists all friend requests for a certain type (incoming / outgoing)
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/aNGKILf.png" alt="/friends requests images"/>
+	<img src="https://i.imgur.com/4j4pUke.png" alt="/friends requests images"/>
+</div>
+
+### /friends msg
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /friends msg | /friends m, /friends tell, /friends w, /friends whisper, /friends message | bungeeutilisals.friends.msg |
+
+**Usage:** /friend msg (user)
+
+**Description:** Allows you to privately message a friend.
+
+### /friends reply
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /friends reply | /friends r | bungeeutilisals.friends.reply |
+
+**Usage:** /friend reply (message)
+
+**Description:** Allows you to reply to a friend that messaged you earlier.
+
+### /friends settings
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /friends settings |  | bungeeutilisals.friends.settings |
+
+**Usage:** /friend settings [setting] [value]
+
+**Description:** Updates a setting value for one of the existing setting types.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/jjUlGbb.png" alt="/friends settings images"/>
+</div>
+
+### /friends broadcast
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /friends broadcast |  | bungeeutilisals.friends.broadcast |
+
+**Usage:** /friend broadcast (message)
+
+**Description:** Broadcasts a message to all your online friends.
 
 ## /ban
-This command permanently bans someone from the BungeeCord network.
 
-**Usage:** /ban (user) (reason) <br>
-**Per Server Usage:** /ban (user) (server) (reason) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
-**Aliases:** /pban, /gban <br>
-**Parameters:**
-- -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /ban didjee2 test -nbp
-- -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /ban didjee2 test -s
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /ban | /pban, /gban | bungeeutilisals.punishments.ban |
 
-**Default Permission:** bungeeutilisals.punishments.ban <br>
-**Default Broadcast permission:** bungeeutilisals.punishments.ban.broadcast <br>
+**Usage:** /ban (user) <server> (reason)
 
-When someone has the default broadcast permission, they will get a message when someone gets punished.
+**Description:** Permanently bans a given user from the network (or given server if per-server punishments are enabled).
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/Xh9CDWd.png" alt="/ban images"/>
+	<img src="https://i.imgur.com/qpdlTAd.png" alt="/ban images"/>
+</div>
 
 ## /ipban
-This command permanently bans someone's ip from the BungeeCord network.
 
-**Usage:** /ipban (user / IP) (reason) <br>
-**Per Server Usage:** /ipban (user / IP) (server) (reason) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
-**Aliases:** /banip, /gbanip, /gipban <br>
-**Parameters:**
-- -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /ipban didjee2 test -nbp
-- -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /ipban didjee2 test -s
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /ipban | /banip, /gbanip, /gipban | bungeeutilisals.punishments.ipban |
 
-**Default Permission:** bungeeutilisals.punishments.ipban <br>
-**Default Broadcast permission:** bungeeutilisals.punishments.ipban.broadcast <br>
+**Usage:** /ipban (user / ip) <server> (reason)
 
-When someone has the default broadcast permission, they will get a message when someone gets punished.
+**Description:** Permanently ipbans a given user from the network (or given server if per-server punishments are enabled).
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/QnBWURl.png" alt="/ipban images"/>
+</div>
 
 ## /tempban
-This command temporarily bans someone from the BungeeCord network.
 
-**Usage:** /tempban (user) (timeformat) (reason) <br>
-**Per Server Usage:** /tempban (user) (timeformat) (server) (reason) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
-**Aliases:** /tban, /gtban <br>
-**Parameters:**
-- -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /tempban didjee2 1d test -nbp
-- -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /tempban didjee2 test -s
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /tempban | /tban, /gtban | bungeeutilisals.punishments.tempban |
 
-**Default Permission:** bungeeutilisals.punishments.tempban <br>
-**Default Broadcast permission:** bungeeutilisals.punishments.tempban.broadcast <br>
+**Usage:** /tempban (user) (time) <server> (reason)
 
-When someone has the default broadcast permission, they will get a message when someone gets punished.
+**Description:** Temporarily bans a given user from the network (or given server if per-server punishments are enabled).
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/OKqe23Q.png" alt="/tempban images"/>
+	<img src="https://i.imgur.com/AWui1nz.png" alt="/tempban images"/>
+</div>
 
 ## /iptempban
-This command temporarily bans someone's ip from the BungeeCord network.
 
-**Usage:** /iptempban (user / IP) (timeformat) (reason) <br>
-**Per Server Usage:** /iptempban (user) (timeformat) (server) (reason) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
-**Aliases:** /iptempban, /tipban, /gtipban, /tbanip <br>
-**Parameters:**
-- -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /iptempban didjee2 1d test -nbp
-- -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /iptempban didjee2 test -s
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /iptempban | /iptempban, /tipban, /gtipban, /tbanip | bungeeutilisals.punishments.tempbanip |
 
-**Default Permission:** bungeeutilisals.punishments.tempbanip <br>
-**Default Broadcast permission:** bungeeutilisals.punishments.tempbanip.broadcast <br>
+**Usage:** /iptempban (user / ip) (time) <server> (reason)
 
-When someone has the default broadcast permission, they will get a message when someone gets punished.
+**Description:** Temporarily ipbans a given user from the network (or given server if per-server punishments are enabled).
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/LFejfJE.png" alt="/iptempban images"/>
+</div>
 
 ## /mute
-This command permanently mutes someone from the BungeeCord network.
 
-**Usage:** /mute (user) (reason) <br>
-**Per Server Usage:** /mute (user) (server) (reason) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
-**Aliases:** /pmute, /gmute <br>
-**Parameters:**
-- -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /mute didjee2 test -nbp
-- -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /mute didjee2 test -s
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /mute | /pmute, /gmute | bungeeutilisals.punishments.mute |
 
-**Default Permission:** bungeeutilisals.punishments.mute <br>
-**Default Broadcast permission:** bungeeutilisals.punishments.mute.broadcast <br>
+**Usage:** /mute (user) <server> (reason)
 
-When someone has the default broadcast permission, they will get a message when someone gets punished.
+**Description:** Permanently bans a given user globally (or given server if per-server punishments are enabled).
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/5iT5Mun.png" alt="/mute images"/>
+	<img src="https://i.imgur.com/nRJEXFk.png" alt="/mute images"/>
+</div>
 
 ## /ipmute
-This command permanently mutes someone's ip from the BungeeCord network.
 
-**Usage:** /ipmute (user / IP) (reason) <br>
-**Per Server Usage:** /ipmute (user / IP) (server) (reason) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
-**Aliases:** /muteip, /gmuteip, /gipmute <br>
-**Parameters:**
-- -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /ipmute didjee2 test -nbp
-- -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /ipmute didjee2 test -s
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /ipmute | /muteip, /gmuteip, /gipmute | bungeeutilisals.punishments.ipmute |
 
-**Default Permission:** bungeeutilisals.punishments.ipmute <br>
-**Default Broadcast permission:** bungeeutilisals.punishments.ipmute.broadcast <br>
+**Usage:** /ipmute (user / ip) <server> (reason)
 
-When someone has the default broadcast permission, they will get a message when someone gets punished.
+**Description:** Permanently ip mutes a given user globally (or given server if per-server punishments are enabled).
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/YrMU7wO.png" alt="/ipmute images"/>
+</div>
 
 ## /tempmute
-This command temporarily mutes someone from the BungeeCord network.
 
-**Usage:** /tempmute (user) (timeformat) (reason) <br>
-**Per Server Usage:** /tempmute (user) (timeformat) (server) (reason) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
-**Aliases:** /tmute, /gtmute <br>
-**Parameters:**
-- -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /tempmute didjee2 1d test -nbp
-- -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /tempmute didjee2 test -s
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /tempmute | /tmute, /gtmute | bungeeutilisals.punishments.tempmute |
 
-**Default Permission:** bungeeutilisals.punishments.tempmute <br>
-**Default Broadcast permission:** bungeeutilisals.punishments.tempmute.broadcast <br>
+**Usage:** /tempmute (user) (time) <server> (reason)
 
-When someone has the default broadcast permission, they will get a message when someone gets punished.
+**Description:** Temporarily mutes a given user globally (or given server if per-server punishments are enabled).
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/JKe2UrJ.png" alt="/tempmute images"/>
+	<img src="https://i.imgur.com/MyOUwXn.png" alt="/tempmute images"/>
+</div>
 
 ## /iptempmute
-This command temporarily mutes someone's ip from the BungeeCord network.
 
-**Usage:** /iptempmute (user / IP) (timeformat) (reason) <br>
-**Per Server Usage:** /iptempmute (user / IP) (timeformat) (server) (reason) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
-**Aliases:** /iptempmute, /tipmute, /gtipmute, /tmuteip <br>
-**Parameters:**
-- -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /iptempmute didjee2 1d test -nbp
-- -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /iptempmute didjee2 test -s
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /iptempmute | /iptempmute, /tipmute, /gtipmute, /tmuteip | bungeeutilisals.punishments.tempmuteip |
 
-**Default Permission:** bungeeutilisals.punishments.tempmuteip <br>
-**Default Broadcast permission:** bungeeutilisals.punishments.tempmuteip.broadcast <br>
+**Usage:** /iptempmute (user / ip) (time) <server> (reason)
 
-When someone has the default broadcast permission, they will get a message when someone gets punished.
+**Description:** Temporarily ipmutes a given user globally (or given server if per-server punishments are enabled).
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/Yd91BxV.png" alt="/iptempmute images"/>
+</div>
 
 ## /kick
-This command kicks someone from the BungeeCord network.
 
-**Usage:** /kick (user) (reason) <br>
-**Parameters:**
-- -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /kick didjee2 test -nbp
-- -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /kick didjee2 test -s
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /kick |  | bungeeutilisals.punishments.kick |
 
-**Default Permission:** bungeeutilisals.punishments.kick <br>
-**Default Broadcast permission:** bungeeutilisals.punishments.kick.broadcast <br>
+**Usage:** /kick (user) <server> (reason)
 
-When someone has the default broadcast permission, they will get a message when someone gets punished.
+**Description:** Kicks a user for a given reason.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/NiTAjXg.png" alt="/kick images"/>
+	<img src="https://i.imgur.com/ZQLk50n.png" alt="/kick images"/>
+</div>
 
 ## /warn
-This command warns someone on the BungeeCord network.
 
-**Usage:** /warn (user) (reason) <br>
-**Parameters:**
-- -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /warn didjee2 test -nbp
-- -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /warn didjee2 test -s
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /warn |  | bungeeutilisals.punishments.warn |
 
-**Default Permission:** bungeeutilisals.punishments.warn <br>
-**Default Broadcast permission:** bungeeutilisals.punishments.warn.broadcast <br>
+**Usage:** /warn (user) <server> (reason)
 
-When someone has the default broadcast permission, they will get a message when someone gets punished.
+**Description:** Warns a user for a given reason.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/4SXzSG4.png" alt="/warn images"/>
+	<img src="https://i.imgur.com/d2faosi.png" alt="/warn images"/>
+</div>
 
 ## /unban
-This command unbans someone from the BungeeCord network.
 
-**Usage:** /unban (user) <br>
-**Per Server Usage:** /unban (user) (server) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
-**Aliases:** /punban, /gunban, /unsetban, /removeban <br>
-**Parameters:**
-- -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /unban didjee2 -nbp
-- -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /unban didjee2 -s
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /unban | /punban, /gunban, /unsetban, /removeban | bungeeutilisals.punishments.unban |
 
-**Default Permission:** bungeeutilisals.punishments.unban <br>
-**Default Broadcast permission:** bungeeutilisals.punishments.unban.broadcast <br>
+**Usage:** /unban (user) <server>
 
-When someone has the default broadcast permission, they will get a message when someone gets punished.
+**Description:** Removes a ban for a given user.
 
 ## /unbanip
-This command unbans someone's ip from the BungeeCord network.
 
-**Usage:** /unbanip (user / IP) <br>
-**Per Server Usage:** /unbanip (user / IP) (server) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
-**Aliases:** /punbanip, /gunbanip, /unsetbanip, /removebanip <br>
-- -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /unbanip didjee2 -nbp
-- -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /unbanip didjee2 -s
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /unbanip | /punbanip, /gunbanip, /unsetbanip, /removebanip | bungeeutilisals.punishments.unbanip |
 
-**Default Permission:** bungeeutilisals.punishments.unbanip <br>
-**Default Broadcast permission:** bungeeutilisals.punishments.unbanip.broadcast <br>
+**Usage:** /unbanip (user / IP) <server>
 
-When someone has the default broadcast permission, they will get a message when someone gets punished.
+**Description:** Removes an IP ban for a given user / IP.
 
 ## /unmute
-This command unmutes someone from the BungeeCord network.
 
-**Usage:** /unmute (user) 
-**Per Server Usage:** /unmute (user) (server) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
-**Aliases:** /punmute, /gunmute, /unsetmute, /removemute <br>
-- -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /unmute didjee2 -nbp
-- -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /unmute didjee2 -s
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /unmute | /punmute, /gunmute, /unsetmute, /removemute | bungeeutilisals.punishments.unmute |
 
-**Default Permission:** bungeeutilisals.punishments.unmute <br>
-**Default Broadcast permission:** bungeeutilisals.punishments.unmute.broadcast <br>
+**Usage:** /unmute (user) <server>
 
-When someone has the default broadcast permission, they will get a message when someone gets punished.
+**Description:** Removes a mute for a given user.
 
 ## /unmuteip
-This command unmutes someone's ip from the BungeeCord network.
 
-**Usage:** /unmuteip (user / IP) <br>
-**Per Server Usage:** /unmuteip (user / IP) (server) <small>| This will only work when per-server-punishments are enabled in the punishments config |</small><br>
-**Aliases:** /punmuteip, /gunmuteip, /unsetmuteip, /removemuteip <br>
-- -nbp, stands for nobroadcastpermission, this parameter will make it so the broadcast permission gets ignored (aka public punishment), example: /unmuteip didjee2 -nbp
-- -s, stands for silent, this paramater will make it so no broadcast is sent, for example: /unmuteip didjee2 -s
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /unmuteip | /punmuteip, /gunmuteip, /unsetmuteip, /removemuteip | bungeeutilisals.punishments.unmuteip |
 
-**Default Permission:** bungeeutilisals.punishments.unmuteip <br>
-**Default Broadcast permission:** bungeeutilisals.punishments.unmuteip.broadcast <br>
+**Usage:** /unmuteip (user / IP) <server>
 
-When someone has the default broadcast permission, they will get a message when someone gets punished.
+**Description:** Removes an IP mute for a given user / IP.
 
 ## /punishmentinfo
-This command shows info about the punishments a certain user currently has.
 
-**Usage:** /punishmentinfo (user) [type / all] [page] <br>
-**Aliases:** /pinfo <br>
-**Default Permission:** bungeeutilisals.punishments.punishmentinfo <br>
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /punishmentinfo | /pinfo | bungeeutilisals.punishments.punishmentinfo |
+
+**Usage:** /punishmentinfo (user) <server> [type / all]
+
+**Description:** Shows you the current status for a specific punishment type or all punishment types for a specific user.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/BUqYtSI.png" alt="/punishmentinfo images"/>
+</div>
 
 ## /punishmenthistory
-This command shows info about the punishment history of a certain user.
 
-**Usage:** /punishmenthistory (user) [type / all] [page] <br>
-**Aliases:** /phistory <br>
-**Default Permission:** bungeeutilisals.punishments.punishmenthistory <br>
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /punishmenthistory | /phistory | bungeeutilisals.punishments.punishmenthistory |
+
+**Usage:** /punishmenthistory (user) [type / all] [page]
+
+**Description:** Shows you the punishment history for a specific user.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/QxMdfY0.png" alt="/punishmenthistory images"/>
+</div>
 
 ## /punishmentdata
-This command shows info about a certain punishment id.
 
-**Usage:** /punishmentdata (type) (id) <br>
-**Aliases:** /pdata <br>
-**Default Permission:** bungeeutilisals.punishments.punishmentdata <br>
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /punishmentdata | /pdata | bungeeutilisals.punishments.punishmentdata |
+
+**Usage:** /punishmentdata (type) (id)
+
+**Description:** Shows you data for a specific punishment type and id.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/TwjOTut.png" alt="/punishmentdata images"/>
+</div>
+
+## /checkip
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /checkip | /dupeip, /checkalts | bungeeutilisals.punishments.checkip |
+
+**Usage:** /checkip (user / ip)
+
+**Description:** Checks the accounts on a given IP and their current ban status.
 
 ## /staffhistory
-This command shows info about the punishments that have been **executed** by a certain user.
 
-**Usage:** /staffhistory (user) [type / all] [page] <br>
-**Aliases:** /shistory <br>
-**Default Permission:** bungeeutilisals.punishments.staffhistory <br>
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /staffhistory | /shistory | bungeeutilisals.punishments.staffhistory |
 
-# Friend Commands
-## /friend add (user)
-Adds someone to your friend list.
+**Usage:** /staffhistory (user) [type / all] [page]
 
-**Usage:** /friend add (user) <br>
-**Aliases:** /friends send, /friends request <br>
-**Default Permission:** bungeeutilisals.friends.add <br>
+**Description:** Shows you a list of punishments executed by this specific user.
 
-## /friend remove (user)
-Removes someone from your friend list.
+**Images:**
 
-**Usage:** /friend remove (user) <br>
-**Aliases:** /friends delete, /friends del <br>
-**Default Permission:** bungeeutilisals.friends.remove <br>
+<div class="imagelist">
+	<img src="https://i.imgur.com/ch3xmq8.png" alt="/staffhistory images"/>
+</div>
 
-## /friend accept (user)
-Accepts someone into your friend list.
+## /trackpunish
 
-**Usage:** /friend accept (user) <br>
-**Aliases:** /friends approve <br>
-**Default Permission:** bungeeutilisals.friends.accept <br>
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /trackpunish | /pt, /punishtrack, /trackpunishment | bungeeutilisals.punishments.trackpunish |
 
-## /friend deny (user)
-Denies someone from your friend list.
+**Usage:** /trackpunish (user) (reason)
 
-**Usage:** /friend deny (user) <br>
-**Default Permission:** bungeeutilisals.friends.deny <br>
+**Description:** Executes a track punishment for a specific user. Track punishments can be very useful for laying out a set punishment path for certain rule breakings.
 
-## /friend removerequest (user)
-Removes a request that you sent to someone.
+## /staffrollback
 
-**Usage:** /friend removerequest (user) <br>
-**Aliases:** /friends rr <br>
-**Default Permission:** bungeeutilisals.friends.removerequest <br>
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /staffrollback | /srollback | bungeeutilisals.punishments.staffrollback |
 
-## /friend list [page]
-Lists the friends that you have.
+**Usage:** /staffrollback (user) (time) [-f]
 
-**Usage:** /friend list [page] <br>
-**Aliases:** /friends fl <br>
-**Default Permission:** bungeeutilisals.friends.list <br>
+**Description:** Performs a rollback of punishments executed since the given time. If the -f parameter is given, the rollback will be a hard rollback (permanently deleted).
 
-## /friend requests (in / out) [page]
-Lists the incoming and outgoing friend requests that you have.
+**Images:**
 
-**Usage:** /friend requests (in / out) [page] <br>
-**Aliases:** /friends req <br>
-**Default Permission:** bungeeutilisals.friends.requests <br>
+<div class="imagelist">
+	<img src="https://i.imgur.com/q5zheYO.png" alt="/staffrollback images"/>
+</div>
 
-## /friend msg (user) (message)
-Sends a private message to someone in your friends list.
-
-**Usage:** /friend msg (user) (message) <br>
-**Aliases:** /friends m, /friends tell, /friends w, /friends whisper, /friends message <br>
-**Default Permission:** bungeeutilisals.friends.msg <br>
-
-## /friend reply (message)
-Replies to a private message by / to a friend.
-
-**Usage:** /friend reply (message) <br>
-**Aliases:** /friends r <br>
-**Default Permission:** bungeeutilisals.friends.reply <br>
-
-## /friend settings (setting) (enable / disable)
-Changes user preference for certain settings.
-
-**Usage:** /friend settings (setting) (enable / disable) <br>
-**Default Permission:** bungeeutilisals.friends.settings <br>
-
-# Report Commands
-## /report create (user) (reason)
-Creates a report against a certain user.
-
-**Usage:** /report create (user) (reason) <br>
-**Aliases:** /report c, /report new <br>
-**Default Permission:** bungeeutilisals.commands.report.create <br>
-
-## /report list [all/active/accepted/denied] [page]
-Lists the reports that are valid to the criteria (all, active, accepted or denied).
-
-**Usage:** /report list [all/active/accepted/denied] [page] <br>
-**Aliases:** /report list, /report l <br>
-**Default Permission:** bungeeutilisals.commands.report.list <br>
-
-## /report accept (id)
-Accepts a report with a certain ID (the ID can be retrieved from /report list)
-
-**Usage:** /report accept (id) <br>
-**Default Permission:** bungeeutilisals.commands.report.accept <br>
-
-## /report deny (id)
-Denies a report with a certain ID (the ID can be retrieved from /report list)
-
-**Usage:** /report deny (id) <br>
-**Default Permission:** bungeeutilisals.commands.report.deny <br>
-
-## /report history [page]
-Shows your report history and the data of the report (and whether or not it was handled & accepted yet)
-
-**Usage:** /report history [page] <br>
-**Aliases:** /report hist <br>
-**Default Permission:** bungeeutilisals.commands.report.history <br>
