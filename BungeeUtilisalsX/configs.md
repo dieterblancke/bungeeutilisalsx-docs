@@ -58,3 +58,21 @@ This configuration allows you to:
 - enable / disable friends system
 - create friend limit permissions
 - set the default friend settings
+
+# utfsymbols.yml
+[Click here to see the default utfsymbols.yml file](https://github.com/dieterblancke/BungeeUtilisalsX/blob/master/common/src/main/resources/chat/utfsymbols.yml)
+
+In this file you can also add per-symbol permissions by changing the config to this format: 
+
+```yaml
+symbols:
+  enabled: true
+  permission: 'bungeeutilisals.chat.symbols'
+  symbols:
+    - permission: bungeeutilisals.chat.symbols.heart
+      symbol: '\u2764'
+      triggers: '<3, :heart:'
+    - permission: bungeeutilisals.chat.symbols.snowman
+      symbol: '\u2603'
+      triggers: ':snowman:, :sman:'
+```
