@@ -93,7 +93,7 @@ This is an example configuration of a MOTD I used on my server before:
 ```yaml
 enabled: true
 
-# For more info about conditions, please go to https://docs.dbsoftwares.eu/bungeeutilisals/motd-manager#conditions
+# For more info about conditions, please go to https://docs.dieterblancke.xyz/bungeeutilisals/motd-manager#conditions
 motd:
 # Default, this one will show when all others do not apply.
   - condition: 'default'

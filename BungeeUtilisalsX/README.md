@@ -1,6 +1,6 @@
 # BungeeUtilisalsX
 
-**If you have any questions regarding this plugin, suggestions, features or bugs, please PM me on SpigotMC, MC-Market or join my [Discord server](https://discord.dbsoftwares.eu/).**
+**If you have any questions regarding this plugin, suggestions, features or bugs, please PM me on SpigotMC, MC-Market or join my [Discord server](https://discord.dieterblancke.xyz/).**
 
 BungeeUtilisalsX is a fully recoded, cleaner and bigger version of [BungeeUtilisals](https://www.spigotmc.org/resources/bungeeutilisals.7865/). This plugin is an all-in-one solution for your BungeeCord server coming with a bunch of features and many more features are yet to come, of which some are pretty revolutionary.
 
@@ -9,13 +9,13 @@ BungeeUtilisalsX is a fully recoded, cleaner and bigger version of [BungeeUtilis
 
 # Useful Links
 
-[![](https://i.imgur.com/4QxyURe.png)](https://discord.dbsoftwares.eu/)
-[![](https://i.imgur.com/l7ys9OG.png)](https://docs.dbsoftwares.eu/BungeeUtilisalsX/)
-[![](https://i.imgur.com/krx1GRR.png)](https://docs.dbsoftwares.eu/BungeeUtilisalsX/#/commands)
-[![](https://i.imgur.com/oBrmVB8.png)](https://docs.dbsoftwares.eu/BungeeUtilisalsX/#/faq)
+[![](https://i.imgur.com/4QxyURe.png)](https://discord.dieterblancke.xyz/)
+[![](https://i.imgur.com/l7ys9OG.png)](https://docs.dieterblancke.xyz/BungeeUtilisalsX/)
+[![](https://i.imgur.com/krx1GRR.png)](https://docs.dieterblancke.xyz/BungeeUtilisalsX/#/commands)
+[![](https://i.imgur.com/oBrmVB8.png)](https://docs.dieterblancke.xyz/BungeeUtilisalsX/#/faq)
 
 # Test Server
-You can test BungeeUtilisalsX on our test server: **test.dbsoftwares.eu**
+You can test BungeeUtilisalsX on our test server: **test.dieterblancke.xyz**
 
 # Planned Features / Ideas
 - Web UI (likely based on Laravel framework) **[50%]**
@@ -29,9 +29,9 @@ A complete list of planned features / fixes can be found in the [issues created 
 [![](https://i.imgur.com/2t2pOTc.png)](https://www.patreon.com/dbsoftwares)
 
 # Discord
-You can join our [Discord](https://discord.dbsoftwares.eu) server for the quickest support we provide!
+You can join our [Discord](https://discord.dieterblancke.xyz) server for the quickest support we provide!
 
-[![](https://i.imgur.com/YyhmVq0.png)](https://discord.dbsoftwares.eu/)
+[![](https://i.imgur.com/YyhmVq0.png)](https://discord.dieterblancke.xyz/)
 
 ![](https://bstats.org/signatures/bungeecord/BungeeUtilisalsX.svg)
 

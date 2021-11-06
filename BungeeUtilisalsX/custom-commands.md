@@ -22,4 +22,15 @@ With the custom commands system, you can:
 - execute other commands (by console) on command execute
 
 Check out the default custom commands [here](https://github.com/dieterblancke/BungeeUtilisalsX/blob/master/common/src/main/resources/commands/customcommands.yml)!
-You can test these commands yourself by joining **test.dbsoftwares.eu**!
+You can test these commands yourself by joining **test.dieterblancke.xyz**!
+
+# Alias commands
+Custom commands can also be made as an alias for other commands, for example:
+```yaml
+commands:
+  - name: 'vote'
+    aliases:
+      - 'testvote'
+      - 'votetest'
+    alias-for: 'examplevotecommand'
+```

@@ -1,9 +1,9 @@
 # Developer API
 
 # Bossbar API
-* For all IBossBar methods, please [check it out here](https://git.dbsoftwares.eu/dbsoftwares/BungeeUtilisalsX/blob/master/api/src/main/java/com/dbsoftwares/bungeeutilisals/api/bossbar/IBossBar.java)!
-* BossBar Actions, Colors & Styles can [also be found in the same package](https://git.dbsoftwares.eu/dbsoftwares/BungeeUtilisalsX/tree/master/api/src/main/java/com/dbsoftwares/bungeeutilisals/api/bossbar).
-* The different methods to [create a bossbar can be found here](https://git.dbsoftwares.eu/dbsoftwares/BungeeUtilisalsX/blob/master/api/src/main/java/com/dbsoftwares/bungeeutilisals/api/BUAPI.java#L236-258)!
+* For all IBossBar methods, please [check it out here](https://git.dieterblancke.xyz/dbsoftwares/BungeeUtilisalsX/blob/master/api/src/main/java/com/dbsoftwares/bungeeutilisals/api/bossbar/IBossBar.java)!
+* BossBar Actions, Colors & Styles can [also be found in the same package](https://git.dieterblancke.xyz/dbsoftwares/BungeeUtilisalsX/tree/master/api/src/main/java/com/dbsoftwares/bungeeutilisals/api/bossbar).
+* The different methods to [create a bossbar can be found here](https://git.dieterblancke.xyz/dbsoftwares/BungeeUtilisalsX/blob/master/api/src/main/java/com/dbsoftwares/bungeeutilisals/api/BUAPI.java#L236-258)!
 
 ## Creating a BossBar
 ```java
@@ -25,7 +25,7 @@ bossbar.unregister();
 
 # Configuration API
 BungeeUtilisalsX has a configuration API, similar to the one of Bukkit, implemented for both YAML & JSON files. <br>
-This ConfigurationAPI is a separate project, which also [has it's own repository](https://git.dbsoftwares.eu/dbsoftwares/ConfigurationAPI/blob/master/README.md), here you can find more info about how to use it.
+This ConfigurationAPI is a separate project, which also [has it's own repository](https://git.dieterblancke.xyz/dbsoftwares/ConfigurationAPI/blob/master/README.md), here you can find more info about how to use it.
 
 > [!WARNING|style:flat]
 > An exception will be thrown if the file does not exist! In order to avoid this, make sure that the file exists (empty or not) before loading it.
