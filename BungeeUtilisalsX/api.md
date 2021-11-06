@@ -133,7 +133,7 @@ langManager.setLanguageIntegration(uuid -> {
 ```
 
 ## Creating a custom language manager
-You could also create a custom language manager, which you could base on the default language manager ([PluginLanguageManager](https://github.com/dieterblancke/BungeeUtilisalsX/blob/master/bungee/src/main/java/com/dbsoftwares/bungeeutilisals/language/PluginLanguageManager.java) and [AbstractLanguageManager](https://github.com/dieterblancke/BungeeUtilisalsX/blob/master/bungee/src/main/java/com/dbsoftwares/bungeeutilisals/language/AbstractLanguageManager.java)).
+You could also create a custom language manager, which you could base on the default language manager ([PluginLanguageManager](https://github.com/dieterblancke/BungeeUtilisalsX/blob/master/common/src/main/java/com/dbsoftwares/bungeeutilisals/language/PluginLanguageManager.java) and [AbstractLanguageManager](https://github.com/dieterblancke/BungeeUtilisalsX/blob/master/bungee/src/main/java/com/dbsoftwares/bungeeutilisals/language/AbstractLanguageManager.java)).
 
 You could also just make a custom LanguageManager which extends PluginLanguageManager and override the methods you want to see changed.
 **Note:** This is the more "hacky" way of implementing your custom language manager by using Reflection to do so. Please do not use this if you don't understand what you are doing.

@@ -1,6 +1,6 @@
 # PlaceHolders
 
-**NOTE:** The placeholders displayed here are not all placeholders! There are many, message-specific placeholders available. For this, check out the [language files](https://github.com/dieterblancke/BungeeUtilisalsX/blob/master/bungee/src/main/resources/languages/).
+**NOTE:** The placeholders displayed here are not all placeholders! There are many, message-specific placeholders available. For this, check out the [language files](https://github.com/dieterblancke/BungeeUtilisalsX/blob/master/common/src/main/resources/languages/).
 
 # General PlaceHolders
 | PlaceHolder | Explanation |

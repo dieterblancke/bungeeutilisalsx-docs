@@ -21,5 +21,5 @@ With the custom commands system, you can:
   * these messages support placeholders
 - execute other commands (by console) on command execute
 
-Check out the default custom commands [here](https://github.com/dieterblancke/BungeeUtilisalsX/blob/master/bungee/src/main/resources/commands/customcommands.yml)!
+Check out the default custom commands [here](https://github.com/dieterblancke/BungeeUtilisalsX/blob/master/common/src/main/resources/commands/customcommands.yml)!
 You can test these commands yourself by joining **test.dbsoftwares.eu**!
