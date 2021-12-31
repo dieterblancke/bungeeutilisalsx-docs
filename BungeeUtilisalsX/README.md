@@ -17,21 +17,12 @@ BungeeUtilisalsX is a fully recoded, cleaner and bigger version of [BungeeUtilis
 # Test Server
 You can test BungeeUtilisalsX on our test server: **test.dieterblancke.xyz**
 
-# Planned Features / Ideas
-- Web UI (likely based on Laravel framework) **[50%]**
-- Discord integration (a discord bot that would connect with BungeeUtilisals to have things like staff chat, stats, ... connected **[0 %]**
-- Party System **[0 %]**
-
-A complete list of planned features / fixes can be found in the [issues created by me on the Github Repository](https://github.com/dieterblancke/BungeeUtilisalsX/issues/created_by/dieterblancke).
-
 # Donate
 
-[![](https://i.imgur.com/2t2pOTc.png)](https://www.patreon.com/dbsoftwares)
+If you really like my work, you can help me keeping it up through [my PayPal.Me](https://www.paypal.me/dbsoftware)!
 
 # Discord
 You can join our [Discord](https://discord.dieterblancke.xyz) server for the quickest support we provide!
-
-[![](https://i.imgur.com/YyhmVq0.png)](https://discord.dieterblancke.xyz/)
 
 ![](https://bstats.org/signatures/bungeecord/BungeeUtilisalsX.svg)
 
