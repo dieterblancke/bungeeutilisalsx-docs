@@ -77,7 +77,16 @@ The following values can be used to check on versions: <br />
 1.14.3,
 1.14.4,
 1.15,
-1.15.1
+1.15.1,
+1.15.2,
+1.16,
+1.16.1,
+1.16.2,
+1.16.3,
+1.16.4,
+1.17,
+1.17.1,
+1.18
 
 **For example:**
 ```yaml
