@@ -44,6 +44,8 @@ you can also test everything on my test server: test.dieterblancke.xyz!
 - [/domains list](#domains-list)
 - [/domains search](#domains-search)
 - [/staffannouncement](#staffannouncement)
+- [/offlinemessage](#offlinemessage)
+- [/opengui](#opengui)
 - [/friends](#friends)
 - [/friends help](#friends-help)
 - [/friends add](#friends-add)
@@ -505,6 +507,28 @@ Types can be concatinated, for example 'bcat' will announce bossbar, chat, actio
 **Usage:** /staffannouncement (message)
 
 **Description:** Sends an announcement only to people that have a specific permission.
+
+## /offlinemessage
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /offlinemessage | /omsg | bungeeutilisals.commands.offlinemessage |
+
+**Usage:** /offlinemessage (user) (message)
+
+**Description:** Sends an offline private message to a user.
+
+## /opengui
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /opengui | /og | bungeeutilisals.commands.opengui |
+
+**Usage:** /opengui (gui) [args] [-u=USER]
+
+**Description:** Opens a given gui for yourself or another user, for another user, you need this permission: COMMANDPERMISSION.parameters.-u!
+For example: /opengui custom test will open a custom GUI named from the gui/custom/test.yml file.
+
 
 ## /friends
 
