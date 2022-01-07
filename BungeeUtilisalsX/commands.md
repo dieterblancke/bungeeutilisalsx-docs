@@ -11,9 +11,9 @@ you can also test everything on my test server: test.dieterblancke.xyz!
 
 ## Table of Contents
 - [/bungeeutilisals](#bungeeutilisals)
+- [/bungeeutilisals help](#bungeeutilisals-help)
 - [/bungeeutilisals version](#bungeeutilisals-version)
 - [/bungeeutilisals reload](#bungeeutilisals-reload)
-- [/bungeeutilisals dump](#bungeeutilisals-dump)
 - [/server](#server)
 - [/announce](#announce)
 - [/find](#find)
@@ -31,6 +31,7 @@ you can also test everything on my test server: test.dieterblancke.xyz!
 - [/ignore](#ignore)
 - [/msgtoggle](#msgtoggle)
 - [/report](#report)
+- [/report help](#report-help)
 - [/report create](#report-create)
 - [/report list](#report-list)
 - [/report accept](#report-accept)
@@ -39,10 +40,12 @@ you can also test everything on my test server: test.dieterblancke.xyz!
 - [/chatlock](#chatlock)
 - [/staffchat](#staffchat)
 - [/domains](#domains)
+- [/domains help](#domains-help)
 - [/domains list](#domains-list)
 - [/domains search](#domains-search)
 - [/staffannouncement](#staffannouncement)
 - [/friends](#friends)
+- [/friends help](#friends-help)
 - [/friends add](#friends-add)
 - [/friends accept](#friends-accept)
 - [/friends deny](#friends-deny)
@@ -54,6 +57,20 @@ you can also test everything on my test server: test.dieterblancke.xyz!
 - [/friends reply](#friends-reply)
 - [/friends settings](#friends-settings)
 - [/friends broadcast](#friends-broadcast)
+- [/party](#party)
+- [/party help](#party-help)
+- [/party create](#party-create)
+- [/party invite](#party-invite)
+- [/party accept](#party-accept)
+- [/party leave](#party-leave)
+- [/party chat](#party-chat)
+- [/party setowner](#party-setowner)
+- [/party kick](#party-kick)
+- [/party warp](#party-warp)
+- [/party list](#party-list)
+- [/party setrole](#party-setrole)
+- [/party disband](#party-disband)
+- [/party info](#party-info)
 - [/ban](#ban)
 - [/ipban](#ipban)
 - [/tempban](#tempban)
@@ -86,6 +103,16 @@ you can also test everything on my test server: test.dieterblancke.xyz!
 
 **Description:** The default / admin command to help manage the plugin.
 
+### /bungeeutilisals help
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /bungeeutilisals help |  | null |
+
+**Usage:** /helpsub help
+
+**Description:** Displays help information for the helpsubcommand
+
 ### /bungeeutilisals version
 
 | Command | Default Aliases | Permission |
@@ -105,16 +132,6 @@ you can also test everything on my test server: test.dieterblancke.xyz!
 **Usage:** /bungeeutilisals reload
 
 **Description:** Reloads all configuration files and most systems of BungeeUtilisalsX.
-
-### /bungeeutilisals dump
-
-| Command | Default Aliases | Permission |
-| --- | --- | --- |
-| /bungeeutilisals dump |  | bungeeutilisals.commands.admin.dump |
-
-**Usage:** /bungeeutilisals dump
-
-**Description:** Dumps proxy and system information to paste.dieterblancke.xyz. This can be useful when making an issue.
 
 ## /server
 
@@ -322,6 +339,16 @@ Types can be concatinated, for example 'bcat' will announce bossbar, chat, actio
 	<img src="https://i.imgur.com/Yj3Hh7z.png" alt="/report images"/>
 </div>
 
+### /report help
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /report help |  | null |
+
+**Usage:** /helpsub help
+
+**Description:** Displays help information for the helpsubcommand
+
 ### /report create
 
 | Command | Default Aliases | Permission |
@@ -439,6 +466,16 @@ Types can be concatinated, for example 'bcat' will announce bossbar, chat, actio
 
 **Description:** This command allows you to see on what domains users first joined. This might not work when behind another proxy.
 
+### /domains help
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /domains help |  | null |
+
+**Usage:** /helpsub help
+
+**Description:** Displays help information for the helpsubcommand
+
 ### /domains list
 
 | Command | Default Aliases | Permission |
@@ -485,6 +522,16 @@ Types can be concatinated, for example 'bcat' will announce bossbar, chat, actio
 	<img src="https://i.imgur.com/QIZxT2v.png" alt="/friends images"/>
 	<img src="https://i.imgur.com/Fq4skEB.png" alt="/friends images"/>
 </div>
+
+### /friends help
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /friends help |  | null |
+
+**Usage:** /helpsub help
+
+**Description:** Displays help information for the helpsubcommand
 
 ### /friends add
 
@@ -642,6 +689,244 @@ Types can be concatinated, for example 'bcat' will announce bossbar, chat, actio
 **Usage:** /friend broadcast (message)
 
 **Description:** Broadcasts a message to all your online friends.
+
+## /party
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /party | /party, /bparty | bungeeutilisalsx.party |
+
+**Usage:** /party
+
+**Description:** This command either sends a list of available party commands, or it opens a GUI.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/OAJphyK.png" alt="/party images"/>
+	<img src="https://i.imgur.com/ujwwBvA.png" alt="/party images"/>
+	<img src="https://i.imgur.com/ej1Stkk.png" alt="/party images"/>
+	<img src="https://i.imgur.com/o5ooNOm.png" alt="/party images"/>
+	<img src="https://i.imgur.com/bViNz8e.png" alt="/party images"/>
+	<img src="https://i.imgur.com/EcnDQJ4.png" alt="/party images"/>
+	<img src="https://i.imgur.com/hKyOH1G.png" alt="/party images"/>
+</div>
+
+### /party help
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /party help |  | null |
+
+**Usage:** /helpsub help
+
+**Description:** Displays help information for the helpsubcommand
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/KBzmNcr.png" alt="/party help images"/>
+</div>
+
+### /party create
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /party create | /party make, /party new | bungeeutilisalsx.party.create |
+
+**Usage:** /party create
+
+**Description:** Creates a new party.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/mhCdwLF.png" alt="/party create images"/>
+</div>
+
+### /party invite
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /party invite | /party invite, /party add | bungeeutilisalsx.party.invite |
+
+**Usage:** /party invite (user)
+
+**Description:** Invites someone to your current party.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/tVm5nnW.png" alt="/party invite images"/>
+	<img src="https://i.imgur.com/hjhE72y.png" alt="/party invite images"/>
+</div>
+
+### /party accept
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /party accept | /party join | bungeeutilisalsx.party.accept |
+
+**Usage:** /party accept (user)
+
+**Description:** Accepts the party invite from a certain user.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/ZfnYcv7.png" alt="/party accept images"/>
+	<img src="https://i.imgur.com/2SKBtDf.png" alt="/party accept images"/>
+</div>
+
+### /party leave
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /party leave | /party quit | bungeeutilisalsx.party.leave |
+
+**Usage:** /party leave
+
+**Description:** Leaves your current party.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/QG1B0sc.png" alt="/party leave images"/>
+	<img src="https://i.imgur.com/ArKod08.png" alt="/party leave images"/>
+</div>
+
+### /party chat
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /party chat | /party c | bungeeutilisalsx.party.chat |
+
+**Usage:** /party chat [message]
+
+**Description:** Toggles party chat mode or sends a chat message to the party.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/o79mBKC.png" alt="/party chat images"/>
+</div>
+
+### /party setowner
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /party setowner | /party owner | bungeeutilisalsx.party.setowner |
+
+**Usage:** /party setowner (user)
+
+**Description:** Changes the owner of the party.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/SlR9W0O.png" alt="/party setowner images"/>
+</div>
+
+### /party kick
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /party kick | /party remove | bungeeutilisalsx.party.kick |
+
+**Usage:** /party kick (user)
+
+**Description:** Kicks a member from the party.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/a2HeVfX.png" alt="/party kick images"/>
+	<img src="https://i.imgur.com/f9BgEgD.png" alt="/party kick images"/>
+	<img src="https://i.imgur.com/IaY8Kex.png" alt="/party kick images"/>
+</div>
+
+### /party warp
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /party warp | /party tphere | bungeeutilisalsx.party.warp |
+
+**Usage:** /party warp [user]
+
+**Description:** Warps all party members to your current server.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/5TI2n5B.png" alt="/party warp images"/>
+	<img src="https://i.imgur.com/PvMSQzd.png" alt="/party warp images"/>
+	<img src="https://i.imgur.com/v59Xamv.png" alt="/party warp images"/>
+</div>
+
+### /party list
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /party list | /party l | bungeeutilisalsx.party.list |
+
+**Usage:** /party list (members / invites / requests) [page]
+
+**Description:** Shows a list of members, invites or requests of your current party.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/flRb6Lf.png" alt="/party list images"/>
+</div>
+
+### /party setrole
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /party setrole | /party sr | bungeeutilisalsx.party.setrole |
+
+**Usage:** /party setrole (user) (role)
+
+**Description:** Warps all party members to your current server.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/vPskkS5.png" alt="/party setrole images"/>
+</div>
+
+### /party disband
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /party disband | /party dispose | bungeeutilisalsx.party.disband |
+
+**Usage:** /party disband
+
+**Description:** Disbands the party.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/bnYd101.png" alt="/party disband images"/>
+	<img src="https://i.imgur.com/W8MN0yn.png" alt="/party disband images"/>
+</div>
+
+### /party info
+
+| Command | Default Aliases | Permission |
+| --- | --- | --- |
+| /party info | /party stats | bungeeutilisalsx.party.info |
+
+**Usage:** /party info
+
+**Description:** Shows basic information about your current party.
+
+**Images:**
+
+<div class="imagelist">
+	<img src="https://i.imgur.com/z8sJBSr.png" alt="/party info images"/>
+</div>
 
 ## /ban
 
