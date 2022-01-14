@@ -21,7 +21,7 @@ According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must 
 For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'.
 You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
 ```
-​
+
 # I'm getting an error on startup
 If you're getting an error on startup, just contact didjee2 on Spigot, MC-Market or Discord for help.
 

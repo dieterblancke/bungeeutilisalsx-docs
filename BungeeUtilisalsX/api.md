@@ -7,13 +7,13 @@
 
 ## Creating a BossBar
 ```java
-BUAPI api = BUCore.getApi();
+final IBuXApi api = BuX.getApi();
 
 // Creating BossBar: api.createBossBar(BarColor color, BarStyle style, float progress, BaseComponent[] message)
-IBossBar bossBar = api.createBossBar(BarColor.YELLOW, BarStyle.SOLID, 0.0F, Utils.format("&aExample Message ..."));
+IBossBar bossBar = api.createBossBar( BarColor.YELLOW, BarStyle.SOLID, 0.0F, Utils.format( "&aExample Message ..." ) );
 
-// Adding all online users | this basically broadcasts the BossBar
-api.getUsers().forEach(bossBar::addUser);
+// Adding all online users | this basically broadcasts the BossBar on the local proxy
+api.getUsers().forEach( bossBar::addUser );
 ```
 
 It is recommended to unregister Bossbar objects when they are not being used, as for every bossbar made, there is an event registered. <br>
@@ -110,7 +110,7 @@ By default, BungeeUtilisalsX uses it's own system to handle user languages, howe
 ## Registering Language Fetcher
 This is by far the easiest implementation, this just gets called when a user's language is being requested.
 ```java
-ILanguageManager langManager = BUCore.getApi().getLanguageManager();
+ILanguageManager langManager = BuX.getApi().getLanguageManager();
 
 langManager.setLanguageIntegration(uuid -> {
     Language language = null;
@@ -142,10 +142,10 @@ You could also just make a custom LanguageManager which extends PluginLanguageMa
 final ILanguageManager languageManager = new YourCustomLanguageManager();
 
 // Getting languageManager field.
-Field languageManagerField = ReflectionUtils.getField(BUCore.getApi().getClass(), "languageManager");
+Field languageManagerField = ReflectionUtils.getField(BuX.getApi().getClass(), "languageManager");
 try {
     // Attempting to update languageManager field to new, custom, ILanguageManager instance.
-    languageManagerField.set(BUCore.getApi().getClass(), languageManager);
+    languageManagerField.set(BuX.getApi().getClass(), languageManager);
 } catch (IllegalAccessException e) {
     e.printStackTrace();
 }
@@ -153,7 +153,7 @@ try {
 
 # PlaceHolders
 A list of placeholders can be [found here](placeholders.md).
-PlaceHolderAPI path is [com.dbsoftwares.bungeeutilisals.api.placeholder.PlaceHolderAPI](https://github.com/dieterblancke/BungeeUtilisalsX/blob/master/api/src/main/java/com/dbsoftwares/bungeeutilisals/api/placeholder/PlaceHolderAPI.java) 
+PlaceHolderAPI path is [be.dieterblancke.bungeeutilisalsx.common.api.placeholder.PlaceHolderAPI](https://github.com/dieterblancke/BungeeUtilisalsX/blob/master/common/src/main/java/be/dieterblancke/bungeeutilisalsx/common/api/placeholder/PlaceHolderAPI.java) 
 
 ## Formatting a message
 To replace a placeholder, there are two methods, one for general placeholders:
@@ -167,8 +167,8 @@ final String message = PlaceHolderAPI.formatMessage("Hello {user}, there are {ge
 
 ## Create your own placeholder
 ### Normal PlaceHolder
-An normal placeholder simply gets replaced by what you return in your handler.
-The parameters this method takes is the placeholder to be replaced, a boolean whether or not the placeholder involves an user, and the placeholder handler.
+A normal placeholder simply gets replaced by what you return in your handler.
+The parameters this method takes is the placeholder to be replaced, a boolean whether the placeholder involves a user, and the placeholder handler.
 
 ```java
 PlaceHolderAPI.addPlaceHolder("{user-server}", true, new PlaceHolderEventHandler() {
