@@ -29,3 +29,17 @@ If the error contains the following:
 `Caused by: java.lang.NoSuchMethodError: com.zaxxer.hikari.HikariConfig.setInitializationFailTimeout(J)V`
 
 Then make sure to check for other plugins that use MySQL (specifically HikariCP) as their Hikari might be outdated.
+
+# When I use one bold color code, the entire message becomes bold
+This is a "bug" ever since BungeeUtilisalsX v2.3.5, although this is intended behaviour.
+
+To avoid / fix this, please use the MiniMessage syntax for bold messages, or use the 'reset' color code when you want the bold text to stop.
+
+For example:
+```
+This is &lsome bold text &rand this is some normal text.
+```
+or:
+```
+This is <bold>some bold text</bold> and this is some normal text.
+```

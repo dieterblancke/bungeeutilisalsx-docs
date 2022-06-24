@@ -32,12 +32,19 @@ Yes, BungeeUtilisalsX **does support** hex color codes, but only with BungeeCord
 ### Gradient colors
 BungeeUtilisalsX also has support for "gradient colors", all the text in between two gradient colors will have the first color slowly fade into the second color.
 
-The format for gradient colors is as follows: `{#HEX_COLOR_1}text{/#HEX_COLOR_2}`. For example, if we set these gradient colors on the no-permission message as follows:
+The format for gradient colors is as follows: `<gradient:[color1]:[color...]:[phase]>text</gradient>`. For example, if we set these gradient colors on the no-permission message as follows:
 ```yaml
-no-permission: '{#FF0000}You do not have the permission to do this!{/#FFAE00}'
+no-permission: '<gradient:FF0000:FFAE00>You do not have the permission to do this!</gradient>'
 ```
-This will result in your no permission message being displayed as follows: <br />
+This will result in your no permission message be/ing displayed as follows: <br />
 ![](https://i.imgur.com/NXh1Fby.png)
+
+## MiniMessage
+Since BungeeUtilisalsX v2.3.5, it now uses / supports MiniMessage. Old color codes (with the & format) are still supported (BungeeUtilisalsX has a translation layer for this).
+
+MiniMessage allows you to do amazing things with your messages, feel free to check out the [documentation over here.](https://docs.adventure.kyori.net/minimessage/format.html)
+
+The usage of MiniMessage is being recommended, although not required, as you can see below, the old colors and Text Section systems are still available and supported throughout!
 
 ## Text section messages
 A text section message is a message that allows you to create a message with multiple layer sections that can each have their own hover or click event.

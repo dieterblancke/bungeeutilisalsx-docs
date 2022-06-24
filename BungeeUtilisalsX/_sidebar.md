@@ -3,6 +3,7 @@
 * [Home](/)
 * [Commands](commands.md)
 * [Custom Commands](custom-commands.md)
+* [Punishment System](punishmentsystem.md)
 * [Party System](partysystem.md)
 * [Chat & Announcer Systems](chatsystem.md)
 * [Language System](languages.md)
