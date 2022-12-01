@@ -192,3 +192,14 @@ PlaceHolderAPI.addPlaceHolder(false, "upper", new InputPlaceHolderEventHandler()
     }
 });
 ```
+
+# Server Balancer
+Do you want to send a player to a server group in a balanced way from Spigot / Paper servers? Then you can use a plugin message like so:
+
+```java
+ByteArrayDataOutput out = ByteStreams.newDataOutput();
+out.writeUTF("server-balancer");
+out.writeUTF("Lobbies");
+
+player.sendPluginMessage(plugin, "bux:main", out.toByteArray());
+```
