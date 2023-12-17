@@ -43,22 +43,3 @@ or:
 ```
 This is <bold>some bold text</bold> and this is some normal text.
 ```
-
-# A new Minecraft version came out, but I cannot use it in my MOTD yet?
-BungeeUtilisalsX does not automatically map newer versions, for that I need to make a migration so the plugin can support the new version.
-
-In the meantime, since BungeeUtilisalsX v2.4.0, you can navigate to the /plugins/BungeeUtilisalsX/_internal folder and open the versions.json file.
-In there, you can find the version mappings, if you want to add a new version, you can just add the version mapping by looking up the [protocol version](https://minecraft.fandom.com/wiki/Protocol_version).
-
-For example for 1.19.1, you can add this to the versions.json file (its already present):
-```
-    {
-      "versionName": "1.19.1",
-      "protocolVersion": 760
-    }
-```
-
-It is important to note that there should be **NO DUPLICATE** protocol versions.
-One protocol version can only be mapped to one version name (while it's possible for Minecraft to have multiple version numbers per mapping, for example 1.19.1 and 1.19.2 both have 760 as protocol versions).
-
-If it is not urgent, you don't have to do any of this and you can just wait for the next update, make sure to ask me about it on [my support Discord](https://discord.dieterblancke.xyz) if you want to speed things up!
