@@ -43,3 +43,7 @@ or:
 ```
 This is <bold>some bold text</bold> and this is some normal text.
 ```
+
+# I am using LuckPerms and I gave the user/group the permission, but it still says they don't have the permission
+This could be to do with using the wrong LuckPerms command, I am not sure as to why, but in previous cases when this happened,
+make sure to use the command specific for BungeeCord / Velocity (which should be either /lpb or /lpv, not /lp).
